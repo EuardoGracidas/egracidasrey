@@ -1,34 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="myApp">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My AngularJS Page</title>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
-</head>
-
-<body ng-controller="MainController">
-
-    <h1>{{ message }}</h1>
-
-    <button ng-click="count = count + 1">
-        Click me
-    </button>
-
-    <p>You clicked {{ count }} times.</p>
-
-    <script>
-        angular.module("myApp", [])
-            .controller("MainController", function($scope) {
-
-                $scope.message = "Hello from AngularJS!";
-                $scope.count = 0;
-
-            });
-    </script>
-
-</body>
+<html>
+    <body>
+        <h1>Hola mundo</h1>
+    </body>
 </html>
