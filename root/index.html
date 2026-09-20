@@ -12,5 +12,9 @@
         <h1>{{ message }}</h1>
 
     </body>
-    <script src="index.js"></script>
+    <script>
+        angular.module("myApp", []).controller("MainController", function($scope){
+            $scope.message = "Hola mundo";
+        });
+    </script>
 </html>
