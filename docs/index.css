@@ -1,0 +1,63 @@
+body{
+    margin:0;
+}
+#header{
+    padding:20px;
+    background-color: #02323c;
+    font-family:"Nunito", sans-serif;
+    display:inline-flex;
+    width:100%;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("images/headerpattern.png");
+    background-repeat: repeat-x;
+    background-blend-mode:color-burn;
+}
+#header div{
+    text-align: center;
+    color:#fff;
+}
+#title{
+    font-size: 3.7rem;
+}
+#header h2{
+    font-size: 1.5rem;
+}
+#profilepic{
+    overflow: hidden;
+    width: 270px;
+    height: 300px;
+    border-radius: 80% 60%;
+    
+    box-shadow: 10px 10px 15px -2px rgb(255,255,255,0.3);
+    -webkit-box-shadow: 10px 10px 15px -2px rgb(255,255,255,0.3);
+}
+#separator{
+    width: 100%;
+    border:5px solid #e13700;
+}
+#affiliations{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width:100%;
+    display:inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+}
+#affiliations img{
+    border-radius: 15%;
+    padding:3px;
+    background-color: #fff;
+}
+
+@media (max-width:800px){
+#header{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#profilepic{
+    margin-top:1.5rem;
+}
+}
