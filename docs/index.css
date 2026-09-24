@@ -6,7 +6,7 @@ body{
     background-color: #02323c;
     font-family:"Nunito", sans-serif;
     display:inline-flex;
-    width:95%;
+    width:90%;
     justify-content: space-around;
     align-items: center;
     background-image: url("images/headerpattern.png");
