@@ -1,5 +1,6 @@
 body{
     margin:0;
+    overflow-x: hidden;
 }
 @keyframes slide-in {
   from {
@@ -25,7 +26,7 @@ body{
     background-color: #02323c;
     font-family:"Nunito", sans-serif;
     display:inline-flex;
-    width:96.8%;
+    width:96.9%;
     justify-content: space-around;
     align-items: center;
     background-image: url("images/headerpattern.png");
@@ -72,15 +73,20 @@ body{
     background-color: #fff;
 }
 .paragraph1{
-    background-color: #f7fff7;
+    background-color: #F4F1BB;
     border-radius: 12px;
-    padding:12px;
+    padding:17px;
     -webkit-box-shadow: 5px 5px 5px -3px #0000004e; 
     box-shadow: 5px 5px 5px -3px #0000004e; 
     font-family: "Merriweather", serif;
+    margin: 0.5rem;
 }
-.paragraph1 h1{
+.paragraph1 .container h1{
     font-size: 20px;
+    color: #02323C;
+}
+.paragraph1 .container p{
+    text-align: justify;
 }
 @media (max-width:800px){
     body{
