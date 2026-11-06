@@ -47,8 +47,78 @@ document.addEventListener("DOMContentLoaded", () => {
         reveals.forEach(el => el.classList.add("visible"));
     }
 
+    // Carousels: galleries and certificates become horizontal sliders.
+    // Arrows and dots only appear when the items don't fit (otherwise it stays static).
+    const makeCarousel = (track, extraClass) => {
+        const wrap = document.createElement("div");
+        wrap.className = "carousel" + (extraClass ? " " + extraClass : "");
+        track.parentNode.insertBefore(wrap, track);
+        wrap.appendChild(track);
+        track.classList.add("carousel-track");
+
+        const prev = document.createElement("button");
+        prev.className = "carousel-btn prev";
+        prev.setAttribute("aria-label", "Previous");
+        prev.innerHTML = "&#8249;";
+        const next = document.createElement("button");
+        next.className = "carousel-btn next";
+        next.setAttribute("aria-label", "Next");
+        next.innerHTML = "&#8250;";
+        const dots = document.createElement("div");
+        dots.className = "carousel-dots";
+        wrap.append(prev, next, dots);
+
+        const step = () => {
+            const item = track.firstElementChild;
+            if (!item) return track.clientWidth;
+            const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+            const itemW = item.getBoundingClientRect().width + gap;
+            return Math.max(itemW, Math.floor((track.clientWidth + gap) / itemW) * itemW);
+        };
+        const pages = () => Math.max(1, Math.ceil((track.scrollWidth - track.clientWidth) / step() - 0.05) + 1);
+        const update = () => {
+            const needed = track.scrollWidth > track.clientWidth + 4;
+            wrap.classList.toggle("static", !needed);
+            if (!needed) return;
+            const n = pages();
+            const maxScroll = track.scrollWidth - track.clientWidth;
+            const idx = track.scrollLeft >= maxScroll - 4 ? n - 1 : Math.round(track.scrollLeft / step());
+            prev.disabled = track.scrollLeft <= 4;
+            next.disabled = track.scrollLeft >= maxScroll - 4;
+            if (n > 8) {
+                dots.classList.add("counter");
+                dots.textContent = (idx + 1) + " / " + n;
+                return;
+            }
+            dots.classList.remove("counter");
+            if (dots.children.length !== n) {
+                dots.innerHTML = "";
+                for (let i = 0; i < n; i++) {
+                    const d = document.createElement("button");
+                    d.setAttribute("aria-label", "Go to slide " + (i + 1));
+                    d.addEventListener("click", () => track.scrollTo({ left: i * step() }));
+                    dots.appendChild(d);
+                }
+            }
+            [...dots.children].forEach((d, i) => d.classList.toggle("active", i === idx));
+        };
+        prev.addEventListener("click", () => track.scrollBy({ left: -step() }));
+        next.addEventListener("click", () => track.scrollBy({ left: step() }));
+        track.addEventListener("scroll", () => requestAnimationFrame(update), { passive: true });
+        window.addEventListener("resize", update);
+        track.querySelectorAll("img").forEach(img => img.addEventListener("load", update));
+        update();
+    };
+    document.querySelectorAll(".gallery, .certs").forEach(el => makeCarousel(el));
+    document.querySelectorAll(".card-imgs").forEach(el => {
+        if (el.querySelectorAll("img").length > 1) {
+            el.classList.remove("card-imgs");
+            makeCarousel(el, "single card-carousel");
+        }
+    });
+
     // Lightbox for gallery, card and certificate images
-    const zoomables = [...document.querySelectorAll(".gallery img, .card-imgs img, .cert img, .c2i-logo")];
+    const zoomables = [...document.querySelectorAll(".gallery img, .card-imgs img, .card-carousel img, .cert img, .c2i-logo")];
     const lb = document.createElement("div");
     lb.id = "lightbox";
     lb.innerHTML = '<button id="lb-close" aria-label="Close">&times;</button>' +
