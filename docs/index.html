@@ -1,45 +1,281 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-            Eduardo Gracidas
-        </title>
+        <meta name="description" content="Eduardo Gracidas Reyes — Biomedical Engineer (UDLAP) and M.Sc. Computer Science student at Memorial University of Newfoundland. Research in biomechanics, cyborg insects and AI.">
+        <title>Eduardo Gracidas</title>
 
-        <link rel="stylesheet" href = "index.css">
-        <script src = "index.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js" defer></script>
     </head>
     <body>
-        <div id="header">
+        <nav id="navbar">
+            <a class="brand" href="#header">Eduardo Gracidas</a>
+            <button id="menu-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+            <ul id="nav-links">
+                <li><a href="#about">About me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#c2i">C2I</a></li>
+                <li><a href="#affiliations">Affiliations</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <header id="header">
             <div>
                 <h1 id="title">Eduardo Gracidas</h1>
                 <h2>B.Sc. Biomedical Engineer</h2>
                 <h2>M.Sc. Computer Science</h2>
-                <div id="affiliations">
-                    <img src="images/affiliations/memorial.png" width="120px" height="80px">
-                    <img src="images/affiliations/INAOE.png" width="80px" height="80px">
-                    <img src="images/affiliations/udlap.jpg" width="80px" height="80px">
+                <div id="affiliations-logos">
+                    <img src="images/affiliations/memorial.png" width="120" height="80" alt="Memorial University of Newfoundland">
+                    <img src="images/affiliations/INAOE.png" width="80" height="80" alt="INAOE">
+                    <img src="images/affiliations/udlap.jpg" width="80" height="80" alt="Universidad de las Américas Puebla">
                 </div>
             </div>
-            <img id="profilepic" src="images/IMG_1266.JPG">
-        </div>
+            <img id="profilepic" src="images/IMG_1266.JPG" alt="Eduardo Gracidas">
+        </header>
         <div id="separator"></div>
-        <div class="paragraph1">
-            <div class = "container">
-                <h1>Brief profile</h1>
-                <p>
-                    I am a Biomedical Engineer currently pursuing a Master’s degree in Computer Science at Memorial University of Newfoundland. I began my undergraduate studies in Biomedical Engineering at Universidad de las Américas Puebla (UDLAP) in 2022. Throughout my bachelor’s degree, I actively participated in a wide range of research projects, academic events, and competitions, including EXPOCEM, SILLONDROMO at the Instituto Nacional de Astrofísica, Óptica y Electrónica (INAOE), CNIB 2025, and ICOKG 2025. In parallel with my university studies, I completed several professional certifications and specialized courses through institutions such as the University of Toronto and Boston Scientific, as well as a Diploma in Neurolearning from Universidad Anáhuac.
-                    <br><br>
-                    After completing my research thesis in 2026, I graduated with honours, receiving the distinction of <em>summa cum laude</em>. During the same period, I successfully published a scientific article in <em>Biology</em>, an MDPI journal (Q1; Impact Factor: 4.3; CiteScore: 7.3), presenting the research I conducted at INAOE as part of my social service and professional internship. Shortly after completing my bachelor’s degree, I was awarded a fully funded scholarship to pursue a Master’s degree in Computer Science at Memorial University of Newfoundland, where I began my graduate studies in September 2026. This academic transition has allowed me to further integrate my background in biomedical engineering and scientific research with advanced training in computer science.
+
+        <main>
+            <!-- ABOUT -->
+            <section id="about" class="paragraph1 reveal">
+                <div class="container">
+                    <h1>Brief profile</h1>
+                    <p>
+                        I am a Biomedical Engineer currently pursuing a Master’s degree in Computer Science at Memorial University of Newfoundland. I was born in Puebla, Mexico, in 2004, and began my undergraduate studies in Biomedical Engineering at Universidad de las Américas Puebla (UDLAP) in 2022. Throughout my bachelor’s degree, I actively participated in a wide range of research projects, academic events, and competitions, including EXPOCEM, SILLONDROMO at the Instituto Nacional de Astrofísica, Óptica y Electrónica (INAOE), CNIB 2025, and ICOKG 2025, where I received several awards and recognitions. In parallel with my university studies, I completed several professional certifications and specialized courses through institutions such as the University of Toronto and Boston Scientific, as well as a Diploma in Neurolearning from Universidad Anáhuac.
+                        <br><br>
+                        After completing my research thesis in 2026, I graduated with honours, receiving the distinction of <em>summa cum laude</em>. During the same period, I successfully published a scientific article in <em>Biology</em>, an MDPI journal (Q1; Impact Factor: 4.3; CiteScore: 7.3), presenting the research I conducted at INAOE as part of my social service and professional internship. Shortly after completing my bachelor’s degree, I was awarded a fully funded scholarship to pursue a Master’s degree in Computer Science at Memorial University of Newfoundland, where I began my graduate studies in September 2026. This academic transition has allowed me to further integrate my background in biomedical engineering and scientific research with advanced training in computer science.
                     </p>
-            </div>
-        </div>
+                </div>
+            </section>
+
+            <!-- EDUCATION -->
+            <section id="education" class="paragraph1 reveal">
+                <div class="container">
+                    <h1>Education</h1>
+                    <ul class="timeline">
+                        <li>
+                            <span class="date">2026 – present</span>
+                            <strong>M.Sc. Computer Science</strong>
+                            <span class="where">Memorial University of Newfoundland</span>
+                        </li>
+                        <li>
+                            <span class="date">2022 – 2026</span>
+                            <strong>B.Sc. Biomedical Engineering</strong> <span class="tag">Summa cum laude</span>
+                            <span class="where">Universidad de las Américas Puebla (UDLAP)</span>
+                        </li>
+                        <li>
+                            <span class="date">2025</span>
+                            <strong>Diploma in Neurolearning</strong> (100 hours)
+                            <span class="where">Universidad Anáhuac Puebla</span>
+                        </li>
+                        <li>
+                            <span class="date">2025</span>
+                            <strong>Bachelor’s Master Classes</strong>
+                            <span class="where">Boston Scientific</span>
+                        </li>
+                        <li>
+                            <span class="date">2025</span>
+                            <strong>Artificial Intelligence in Global Health Research</strong> (MSC1125H)
+                            <span class="where">University of Toronto</span>
+                        </li>
+                        <li>
+                            <span class="date">2025</span>
+                            <strong>Startups in the Medical Sciences</strong> (MSC1122H)
+                            <span class="where">University of Toronto</span>
+                        </li>
+                        <li>
+                            <span class="date">2023</span>
+                            <strong>Artificial Intelligence in Medicine</strong> (MSC1114H)
+                            <span class="where">University of Toronto</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- RESEARCH -->
+            <section id="research" class="paragraph1 reveal">
+                <div class="container">
+                    <h1>Research</h1>
+
+                    <h3>Interests</h3>
+                    <div class="chips">
+                        <span>Cybernetics</span>
+                        <span>Biomechanics</span>
+                        <span>Instrumentation</span>
+                        <span>Bioinformatics</span>
+                        <span>Biorobotics</span>
+                        <span>Behaviour-Based Artificial Intelligence</span>
+                        <span>Neurosciences</span>
+                    </div>
+
+                    <h3>Research articles</h3>
+                    <ul class="list">
+                        <li>
+                            Gracidas-Reyes, E.; Díaz-Arango, G.; Vázquez-Leal, H.; Marroquín-Gutiérrez, F. (2026).
+                            <em>Temperature-Dependent Tethered Locomotion Behavior in the Madagascar Hissing Cockroach Using a Controlled-Environment Treadmill Platform with Exploratory Illumination Assays.</em>
+                            <strong>Biology</strong>, 15(12), 947. MDPI.
+                        </li>
+                    </ul>
+
+                    <h3>Book chapters</h3>
+                    <ul class="list">
+                        <li><em>Adquisición de datos para el análisis de la locomoción de Gromphadorhina portentosa bajo distintas condiciones térmicas.</em></li>
+                        <li><em>Advances in the Design and Control of Cyborg Hissing Cockroaches: Machine Learning, Motion Tracking, and Temperature Control with a Perspective on Search and Rescue Operations.</em></li>
+                    </ul>
+
+                    <h3>Conferences</h3>
+                    <ul class="list">
+                        <li>International Conference on Ontologies and Knowledge Graphs (ICOKG 2025).</li>
+                        <li>Congreso Nacional de Ingeniería Biomédica (CNIB 2025).</li>
+                        <li>Segundo Congreso Nacional de Ciencia de Datos — <span class="award">2nd place, poster competition</span>.</li>
+                        <li>II Congreso del Programa de Honores UDLAP.</li>
+                    </ul>
+
+                    <h3>Posters and expositions</h3>
+                    <ul class="list">
+                        <li>Sistema de análisis biomecánico (CNIB 2025).</li>
+                        <li>Adquisición de datos y modelado estadístico para la caracterización y control de cucarachas cíborg (IICNNCD) — <span class="award">Winner</span>.</li>
+                        <li>Sistema de monitoreo de señales biomecánicas (7ª Jornada de Mujeres en la Ciencia).</li>
+                        <li>Sistema de análisis biomecánico (EXPOCEM 2025) — <span class="award">Winner</span>.</li>
+                        <li>Análisis biomecánico de pacientes con Genu Valgo (EXPOCEM 2024).</li>
+                    </ul>
+
+                    <h3>Competitions</h3>
+                    <ul class="list">
+                        <li>3er. Concurso estudiantil para generación de aplicaciones biomédicas a partir del procesamiento y análisis de bioseñales (Silldromo 2025) at INAOE — <span class="award">3rd place</span>.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- PROJECTS -->
+            <section id="projects" class="paragraph1 reveal">
+                <div class="container">
+                    <h1>Projects</h1>
+                    <div class="cards">
+                        <article class="card">
+                            <h3>Semi-portable Smart Pillbox for improving medical adherence in Polypharmacy Patients</h3>
+                            <p>The system includes an automatic dispensing mechanism with 21 compartments, audiovisual alarms, a TFT display for real-time monitoring, and a cross-platform mobile application for medication scheduling and device management.</p>
+                        </article>
+                        <article class="card">
+                            <h3>IoMT system for surgery and remote monitoring</h3>
+                            <p>Internet of Medical Things platform for surgical support and remote patient monitoring.</p>
+                        </article>
+                        <article class="card">
+                            <h3>Feature extraction for assisting medical diagnosis of Parkinson disease</h3>
+                            <p>Signal feature extraction to support the clinical diagnosis of Parkinson disease.</p>
+                        </article>
+                        <article class="card">
+                            <h3>3D reconstruction of CT images</h3>
+                            <p>Volumetric reconstruction of computed tomography image series.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- C2I -->
+            <section id="c2i" class="paragraph1 reveal">
+                <div class="container">
+                    <h1>Cyborg Insects Initiative (C2I)</h1>
+                    <p>
+                        Insects are renowned for their superior biomechanical capabilities compared to their robotic counterparts, which are often inefficient in chaotic environments and are more costly and challenging to produce. The Cyborg Insects Initiative (C2I) is a project in which I am engaged, focusing on the development of efficient biobots inspired by insects. To achieve this objective, current research primarily involves characterizing various insect species under different environmental conditions, as well as analyzing their physiological activity using specialized instruments. Please feel free to <a href="#contact">contact me</a> if you are interested in contributing to this initiative or wish to learn more about this research field.
+                    </p>
+                    <h3>Current advances</h3>
+                    <div class="cards">
+                        <article class="card">
+                            <h3>Machine learning for improving cockroach locomotion</h3>
+                            <p>We are developing efficient machine learning algorithms for strategically stimulating cyborg cockroaches to avoid habituation and achieve efficient movement control.</p>
+                        </article>
+                        <article class="card">
+                            <h3>QR detection for motion tracking using videogrammetry</h3>
+                            <p>We developed a videogrammetry method for tracking cockroach motion using only a webcam and a QR code, so movement can be analyzed without a heavy electronic backpack or complex systems.</p>
+                        </article>
+                        <article class="card">
+                            <h3>Efficient stimulation</h3>
+                            <p>We have characterized <em>Gromphadorhina portentosa</em> behaviour under different signal stimulation parameters to identify the most efficient signal types for movement control.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AFFILIATIONS -->
+            <section id="affiliations" class="paragraph1 reveal">
+                <div class="container">
+                    <h1>Affiliations</h1>
+                    <div class="two-col">
+                        <div>
+                            <h3>Institutions</h3>
+                            <ul class="list">
+                                <li><strong>Memorial University of Newfoundland</strong> — M.Sc. Computer Science [Since September 2026]</li>
+                                <li><strong>INAOE</strong> — Social service [September 2025 – March 2026]</li>
+                                <li><strong>INAOE</strong> — Professional practices [May 2025 – August 2025]</li>
+                                <li><strong>UDLAP</strong> — Honors program [Since 2023]</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>People</h3>
+                            <ul class="list">
+                                <li><strong>Gerardo Díaz Ulises Arango</strong> — Main collaborator</li>
+                                <li><strong>Roberto Rosas Romero</strong> — Academic advisor</li>
+                                <li><strong>Oscar Meruvia Pastor</strong> — Academic advisor</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CERTIFICATIONS -->
+            <section id="certifications" class="paragraph1 reveal">
+                <div class="container">
+                    <h1>Certifications and recognitions</h1>
+                    <ul class="timeline">
+                        <li><span class="date">2026</span><strong>Certificate of Publication</strong> — <em>Biology</em> (MDPI)<span class="where">Temperature-Dependent Tethered Locomotion Behavior in the Madagascar Hissing Cockroach…</span></li>
+                        <li><span class="date">May 2026</span><strong>Recognition</strong> — Colegio Ángeles<span class="where">For sharing university experience and academic achievements in Biomedical Engineering</span></li>
+                        <li><strong>Panel participant</strong> — Programa de Honores UDLAP<span class="where">“Estudiantes próximos a egresar del Programa de Honores”, II Congreso del Programa de Honores</span></li>
+                        <li><span class="date">Dec 2025</span><strong>Focus on Peer Review</strong> — Nature Masterclasses<span class="where">Springer Nature online course</span></li>
+                        <li><span class="date">Dec 2025</span><strong>Artificial Intelligence in Global Health Research</strong> — University of Toronto<span class="where">Institute of Medical Science, Temerty Medicine</span></li>
+                        <li><span class="date">Oct 2025</span><strong>Third place</strong> — INAOE (Silldromo 2025)<span class="where">3er. Concurso estudiantil para generación de aplicaciones biomédicas a partir del procesamiento y análisis de bioseñales</span></li>
+                        <li><strong>Poster competition</strong> — II Congreso Nacional de Ciencia de Datos, UDLAP</li>
+                        <li><span class="date">2025</span><strong>Accepted poster</strong> — Congreso Nacional de Ingeniería Biomédica (SOMIB)<span class="where">“Sistema de análisis biomecánico”</span></li>
+                        <li><span class="date">2025</span><strong>Presenter</strong> — ICOKG 2025, BUAP</li>
+                        <li><span class="date">2025</span><strong>Poster presenter</strong> — 7ª Jornada de Mujeres en la Ciencia, BUAP<span class="where">“Sistema de análisis biomecánico”</span></li>
+                        <li><span class="date">2025</span><strong>First place, Junior category</strong> — Expo CEM 2.0, UDLAP<span class="where">“Sistema de monitoreo biomecánico”</span></li>
+                        <li><span class="date">May 2025</span><strong>Diploma in Neurolearning</strong> — Universidad Anáhuac Puebla</li>
+                        <li><span class="date">May 2025</span><strong>Wearable Sensors for Cardiorespiratory Monitoring</strong> — IEEE<span class="where">0.5 Continuing Education Units</span></li>
+                        <li><span class="date">2025</span><strong>Bachelor’s Master Classes</strong> — Boston Scientific</li>
+                        <li><span class="date">Mar 2025</span><strong>Startups in the Medical Sciences</strong> — University of Toronto</li>
+                        <li><span class="date">2024</span><strong>Participant</strong> — Expo CEM Otoño 2024, UDLAP<span class="where">“Análisis biomecánico en Kinovea”</span></li>
+                        <li><span class="date">Dec 2023</span><strong>Artificial Intelligence in Medicine</strong> — University of Toronto</li>
+                        <li><span class="date">2023</span><strong>Member</strong> — Programa de Honores, UDLAP</li>
+                        <li><span class="date">2018</span><strong>Microsoft Office Specialist</strong> — Excel 2016</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact" class="paragraph1 reveal">
+                <div class="container">
+                    <h1>Contact</h1>
+                    <p>
+                        Interested in collaborating or in the Cyborg Insects Initiative? Feel free to reach out:
+                        <br>
+                        <a class="mail" href="mailto:eduardo.gracidasrs@udlap.mx">eduardo.gracidasrs@udlap.mx</a>
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> Eduardo Gracidas Reyes</p>
+            <a href="#header" id="to-top" aria-label="Back to top">&#8593;</a>
+        </footer>
     </body>
 </html>
