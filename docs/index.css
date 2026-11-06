@@ -2,6 +2,7 @@
     --teal:#02323c;
     --orange:#e13700;
     --cream:#F4F1BB;
+    --mint:#DCEBE8;
     --ink:#1d1d1d;
     --muted:#4a5a5e;
 }
@@ -149,6 +150,13 @@ main{
     font-family: "Merriweather", serif;
     margin: 1rem 0.5rem;
     line-height: 1.65;
+}
+/* alternate cream / mint backgrounds */
+main section.paragraph1:nth-of-type(even){
+    background-color: var(--mint);
+}
+main section.paragraph1:nth-of-type(even) .timeline li::before{
+    border-color: var(--mint);
 }
 .paragraph1 .container h1{
     font-family: "Nunito", sans-serif;
