@@ -1468,3 +1468,24 @@ h3.sub{ margin-top: 2rem !important; }
     padding: 0.1rem 0.7rem;
     text-shadow: none;
 }
+
+/* C2I advances: light cards for contrast on the dark section */
+.sec-dark .advance{
+    background: #fdfbf0;
+    border: none;
+    border-left: 6px solid var(--c, var(--orange));
+    color: var(--ink);
+    box-shadow: 0 10px 24px -12px rgba(0,0,0,0.7);
+}
+.sec-dark .advance:nth-child(even){ border-left: none; border-right: 6px solid var(--c, var(--orange)); }
+.sec-dark .advance:nth-child(1){ --c: var(--orange); }
+.sec-dark .advance:nth-child(2){ --c: var(--sky); }
+.sec-dark .advance:nth-child(3){ --c: var(--maroon); }
+.sec-dark .advance h3{ color: var(--teal); }
+.sec-dark .advance p{ color: #2b3a3d; }
+.sec-dark .advance .step.c-orange{ color: var(--orange); }
+.sec-dark .advance .step.c-sky{ color: var(--sky); }
+.sec-dark .advance .step.c-maroon{ color: var(--maroon); }
+@media (max-width: 800px){
+    .sec-dark .advance, .sec-dark .advance:nth-child(even){ border-left: none; border-right: none; border-top: 6px solid var(--c); }
+}
