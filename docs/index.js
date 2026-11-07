@@ -108,8 +108,37 @@ document.addEventListener("DOMContentLoaded", () => {
         window.addEventListener("resize", update);
         track.querySelectorAll("img").forEach(img => img.addEventListener("load", update));
         update();
+
+        // Optional autoplay (data-autoplay="ms"); pauses on hover/touch and when off-screen
+        const delay = parseInt(track.dataset.autoplay, 10);
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (delay && !reduce) {
+            let paused = false, visible = false;
+            wrap.addEventListener("mouseenter", () => paused = true);
+            wrap.addEventListener("mouseleave", () => paused = false);
+            wrap.addEventListener("touchstart", () => paused = true, { passive: true });
+            if ("IntersectionObserver" in window) {
+                new IntersectionObserver(es => es.forEach(e => visible = e.isIntersecting), { threshold: 0.4 }).observe(wrap);
+            }
+            setInterval(() => {
+                if (paused || !visible || document.hidden || wrap.classList.contains("static")) return;
+                const maxScroll = track.scrollWidth - track.clientWidth;
+                if (track.scrollLeft >= maxScroll - 4) track.scrollTo({ left: 0 });
+                else track.scrollBy({ left: step() });
+            }, delay);
+        }
     };
-    document.querySelectorAll(".gallery, .certs").forEach(el => makeCarousel(el));
+    // blurred background for single-image slides
+    document.querySelectorAll(".gallery.showcase figure, .gallery.single-slider figure, .gallery.memorial-slider figure").forEach(f => {
+        const img = f.querySelector("img");
+        if (img) f.style.setProperty("--bg", `url("${img.getAttribute("src")}")`);
+    });
+    document.querySelectorAll(".gallery, .certs").forEach(el => {
+        let cls = "";
+        if (el.classList.contains("showcase")) cls = "single showcase";
+        else if (el.classList.contains("single-slider") || el.classList.contains("memorial-slider")) cls = "single";
+        makeCarousel(el, cls);
+    });
     document.querySelectorAll(".card-imgs").forEach(el => {
         if (el.querySelectorAll("img").length > 1) {
             el.classList.remove("card-imgs");
@@ -118,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Lightbox for gallery, card and certificate images
-    const zoomables = [...document.querySelectorAll(".gallery img, .card-imgs img, .card-carousel img, .cert img, .c2i-logo")];
+    const zoomables = [...document.querySelectorAll(".gallery img, .card-imgs img, .card-carousel img, .cert img, .c2i-logo, .framed img, .advance img, .memorial-portrait img, .docs img")];
     const lb = document.createElement("div");
     lb.id = "lightbox";
     lb.innerHTML = '<button id="lb-close" aria-label="Close">&times;</button>' +
