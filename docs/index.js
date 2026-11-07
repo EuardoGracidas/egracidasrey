@@ -276,6 +276,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const initial = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
     setLang(initial);
 
+    // Reading progress bar
+    const prog = document.getElementById("progress");
+    if (prog) {
+        const upd = () => {
+            const h = document.documentElement.scrollHeight - innerHeight;
+            prog.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + "%";
+        };
+        addEventListener("scroll", upd, { passive: true });
+        upd();
+    }
+
     // Back-to-top button
     const toTop = document.getElementById("to-top");
     window.addEventListener("scroll", () => {
