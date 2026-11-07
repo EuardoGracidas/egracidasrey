@@ -10,8 +10,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="index.css?v=8">
-        <script src="index.js?v=8" defer></script>
+        <link rel="stylesheet" href="index.css?v=9">
+        <script src="index.js?v=9" defer></script>
     </head>
     <body>
         <nav id="navbar">
@@ -19,6 +19,7 @@
             <button id="menu-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
             <ul id="nav-links">
                 <li><a href="#about">About me</a></li>
+                <li><a href="#publication">Publication</a></li>
                 <li><a href="#moments">Moments</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#research">Research</a></li>
@@ -69,11 +70,110 @@
                         </div>
                         <div class="stats">
                             <div class="stat c-gold"><span class="num">Summa</span><span class="lbl">cum laude, B.Sc. Biomedical Engineering</span></div>
-                            <div class="stat c-sky"><span class="num">Q1</span><span class="lbl">journal article in <em>Biology</em> (MDPI)</span></div>
+                            <div class="stat c-sky"><span class="num">Q1</span><span class="lbl"><em>Biology</em> article, Editor’s Choice</span></div>
                             <div class="stat c-maroon"><span class="num">2</span><span class="lbl">book chapters on cyborg cockroaches</span></div>
                             <div class="stat c-orange"><span class="num">4</span><span class="lbl">awards in research &amp; poster competitions</span></div>
                             <div class="stat c-teal wide"><span class="num">M.Sc.</span><span class="lbl">fully funded scholarship, Memorial University</span></div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PUBLICATION -->
+            <section id="publication" class="paragraph1 pub reveal">
+                <div class="container">
+                    <h1>Featured publication</h1>
+
+                    <a class="pub-banner" href="https://www.mdpi.com/2079-7737/15/12/947" target="_blank" rel="noopener">
+                        <img src="images/publication/biology-banner.jpg" alt="Biology (MDPI) article banner: Temperature-Dependent Tethered Locomotion Behavior in the Madagascar Hissing Cockroach">
+                        <span class="ribbon">Editor’s Choice</span>
+                    </a>
+
+                    <div class="pub-badges">
+                        <span class="pill c-gold">Editor’s Choice</span>
+                        <span class="pill c-sky">Q1 · Impact Factor 4.3</span>
+                        <span class="pill c-sky">CiteScore 7.3</span>
+                        <span class="pill c-teal">Indexed in PubMed</span>
+                        <span class="pill c-orange">Open Access</span>
+                        <span class="pill c-maroon">First &amp; corresponding author</span>
+                    </div>
+
+                    <h2 class="pub-title">Temperature-Dependent Tethered Locomotion Behavior in the Madagascar Hissing Cockroach Using a Controlled-Environment Treadmill Platform with Exploratory Illumination Assays</h2>
+                    <p class="pub-authors"><strong>Eduardo Gracidas-Reyes</strong>, Gerardo Díaz-Arango, Héctor Vázquez-Leal, Francisco Marroquín-Gutiérrez</p>
+                    <p class="pub-meta"><em>Biology</em> 2026, 15(12), 947 · Behavioural Biology section · Published 17 June 2026 · <a href="https://doi.org/10.3390/biology15120947" target="_blank" rel="noopener">doi.org/10.3390/biology15120947</a></p>
+
+                    <div class="pub-actions">
+                        <a class="btn btn-sky" href="https://www.mdpi.com/2079-7737/15/12/947" target="_blank" rel="noopener">Read the article</a>
+                        <a class="btn btn-gold" href="https://www.mdpi.com/2079-7737/15/12/947/pdf" target="_blank" rel="noopener">Download PDF</a>
+                        <button class="btn btn-outline-dark" id="copy-cite" type="button">Copy citation</button>
+                    </div>
+
+                    <div class="pub-grid">
+                        <div class="pub-summary">
+                            <h3>What the study is about</h3>
+                            <p>
+                                Insects constantly adjust how they move according to their surroundings, and temperature and light are two of the strongest cues. Understanding that relationship is key both for neuroethology and for the development of insect-based biorobots, which is the broader goal of the Cyborg Insects Initiative.
+                            </p>
+                            <p>
+                                In this work we built a low-cost, controlled-environment platform: a spherical treadmill with optical motion tracking inside a chamber where temperature and illumination are programmed and synchronized with the recordings, while a thermal camera monitors the animal. With it, we measured the tethered walking of Madagascar hissing cockroaches (<em>Gromphadorhina portentosa</em>) at six temperatures between 18 and 38 °C, and ran exploratory assays with UV and green light.
+                            </p>
+                            <p>
+                                The locomotion signal was reconstructed from two orthogonal optical sensors and described with metrics of activity intensity, continuity and path organization, which were then analyzed with mixed-effects models, Bonferroni-corrected post hoc tests and Spearman correlations.
+                            </p>
+                        </div>
+                        <div class="pub-numbers">
+                            <div class="stat c-orange"><span class="num">42</span><span class="lbl">cockroaches tested at every temperature</span></div>
+                            <div class="stat c-sky"><span class="num">251</span><span class="lbl">trials analyzed</span></div>
+                            <div class="stat c-maroon"><span class="num">18–38 °C</span><span class="lbl">six programmed temperatures</span></div>
+                            <div class="stat c-gold"><span class="num">±0.25 °C</span><span class="lbl">average temperature-control error</span></div>
+                            <div class="stat c-teal"><span class="num">~28 Hz</span><span class="lbl">motion acquisition rate</span></div>
+                            <div class="stat c-orange"><span class="num">26</span><span class="lbl">pages · 14 figures · 3 tables</span></div>
+                        </div>
+                    </div>
+
+                    <h3>Key findings</h3>
+                    <div class="findings">
+                        <article class="finding c-orange">
+                            <span class="icon">🌡️</span>
+                            <h4>A sweet spot near 30 °C</h4>
+                            <p>Activity measures such as cumulative activity, peak activity rate and peak modulation tended to rise up to about 30 °C, pointing to a non-linear relationship between temperature and locomotion.</p>
+                        </article>
+                        <article class="finding c-maroon">
+                            <span class="icon">🔥</span>
+                            <h4>Heat fragments movement</h4>
+                            <p>At 34 and 38 °C the cockroaches kept their peak activity but spent more time inactive, so their walking became more fragmented instead of sustained.</p>
+                        </article>
+                        <article class="finding c-sky">
+                            <span class="icon">💡</span>
+                            <h4>UV light stands out</h4>
+                            <p>In the exploratory illumination assays, UV light was linked to the largest increases in activity and the clearest drop in inactivity; green light had only slight effects. These results are preliminary and need larger samples.</p>
+                        </article>
+                        <article class="finding c-teal">
+                            <span class="icon">⚖️</span>
+                            <h4>Not explained by size or sex</h4>
+                            <p>Neither body length nor sex accounted for the main thermal pattern, supporting temperature itself as the driver of the observed changes.</p>
+                        </article>
+                    </div>
+
+                    <h3>Inside the study</h3>
+                    <div class="gallery">
+                        <figure><img src="images/c2i/treadmill-platform.jpg" alt="Spherical treadmill platform" loading="lazy"><figcaption>The spherical treadmill platform with its support structure</figcaption></figure>
+                        <figure><img src="images/c2i/cyborg-cockroach.jpg" alt="Tethered cockroach on the treadmill sphere" loading="lazy"><figcaption>A tethered <em>G. portentosa</em> walking on the sphere</figcaption></figure>
+                        <figure><img src="images/research/environment-control-gui.jpg" alt="Software interface of the environmental control system" loading="lazy"><figcaption>Software interface with thermal feed, live plots and environmental controls</figcaption></figure>
+                        <figure><img src="images/research/thermal-tracking.jpg" alt="Thermal frame showing the cockroach and temperature heatmap" loading="lazy"><figcaption>Thermal frame: the animal’s position and the chamber’s heatmap</figcaption></figure>
+                        <figure><img src="images/c2i/cockroach-sphere.jpg" alt="Cockroach during a tethered locomotion test" loading="lazy"><figcaption>Tethered locomotion test</figcaption></figure>
+                    </div>
+
+                    <div class="pub-why">
+                        <h3>Why it matters</h3>
+                        <p>
+                            The results provide a quantitative framework for studying how the environment modulates locomotion in <em>G. portentosa</em>, and the platform itself is an accessible, reproducible tool for future behavioural and bio-inspired research — including the design of biohybrid robots that need to perform reliably under changing conditions. This work grew out of my professional practices and social service at INAOE, and was selected by the journal as an <strong>Editor’s Choice</strong> article.
+                        </p>
+                    </div>
+
+                    <div class="cite-box">
+                        <span class="cite-label">Cite as</span>
+                        <p id="cite-text">Gracidas-Reyes, E.; Diaz-Arango, G.; Vazquez-Leal, H.; Marroquin-Gutierrez, F. Temperature-Dependent Tethered Locomotion Behavior in the Madagascar Hissing Cockroach Using a Controlled-Environment Treadmill Platform with Exploratory Illumination Assays. <em>Biology</em> <strong>2026</strong>, <em>15</em>, 947. https://doi.org/10.3390/biology15120947</p>
                     </div>
                 </div>
             </section>
@@ -163,14 +263,9 @@
                             </div>
                         </div>
                         <div class="feature-text">
-                            <h3>Featured publication</h3>
-                            <p class="citation">
-                                Gracidas-Reyes, E.; Díaz-Arango, G.; Vázquez-Leal, H.; Marroquín-Gutiérrez, F. (2026).
-                                <em>Temperature-Dependent Tethered Locomotion Behavior in the Madagascar Hissing Cockroach Using a Controlled-Environment Treadmill Platform with Exploratory Illumination Assays.</em>
-                                <strong>Biology</strong>, 15(12), 947. MDPI.
-                            </p>
+                            <h3>Journal article</h3>
                             <p>
-                                This article presents the research I carried out at INAOE: a tethered treadmill platform with programmable temperature and illumination, used to quantify how the locomotor behaviour of <em>G. portentosa</em> changes under controlled environmental conditions.
+                                My main publication, in <em>Biology</em> (MDPI, Q1), presents the controlled-environment treadmill platform built at INAOE and the thermal and light-dependent locomotion of <em>G. portentosa</em>. It was selected as an <strong>Editor’s Choice</strong> article — see the <a href="#publication">featured publication</a> above for the full story.
                             </p>
                             <h3>Book chapters</h3>
                             <ul class="list">
@@ -392,7 +487,7 @@
                     <h1>Certifications and recognitions</h1>
                     <p class="lead">Certificates, awards and acceptance letters collected along the way. Swipe or use the arrows, and click any certificate to enlarge it.</p>
                     <div class="certs">
-                        <figure class="cert"><img src="images/certs/mdpi-publication.jpg" alt="Certificate of publication, Biology (MDPI)" loading="lazy"><figcaption><span class="date">2026</span><strong>Certificate of Publication</strong> — <em>Biology</em> (MDPI)</figcaption></figure>
+                        <figure class="cert"><img src="images/certs/mdpi-publication.jpg" alt="Certificate of publication, Biology (MDPI)" loading="lazy"><figcaption><span class="date">Nov 2026</span><strong>Certificate of Publication, Editor’s Choice</strong> — <em>Biology</em> (MDPI)</figcaption></figure>
                         <figure class="cert"><img src="images/certs/mdpi-acceptance.jpg" alt="Certificate of acceptance, Biology (MDPI)" loading="lazy"><figcaption><span class="date">June 2026</span><strong>Certificate of Acceptance</strong> — <em>Biology</em> (MDPI)</figcaption></figure>
                         <figure class="cert"><img src="images/certs/colegio-angeles.jpg" alt="Recognition from Colegio Ángeles" loading="lazy"><figcaption><span class="date">May 2026</span><strong>Recognition</strong> — Colegio Ángeles</figcaption></figure>
                         <figure class="cert"><img src="images/certs/honors-panel.jpg" alt="Honors program panel recognition" loading="lazy"><figcaption><strong>Panel participant</strong> — II Congreso del Programa de Honores, UDLAP</figcaption></figure>

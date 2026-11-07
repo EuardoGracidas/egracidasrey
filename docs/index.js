@@ -179,6 +179,17 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "ArrowRight") show(current + 1);
     });
 
+    // Copy citation
+    const copyBtn = document.getElementById("copy-cite");
+    if (copyBtn) copyBtn.addEventListener("click", async () => {
+        const text = document.getElementById("cite-text").innerText;
+        try { await navigator.clipboard.writeText(text); }
+        catch { const r = document.createRange(); r.selectNodeContents(document.getElementById("cite-text")); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); document.execCommand("copy"); sel.removeAllRanges(); }
+        copyBtn.textContent = "Copied ✓";
+        copyBtn.classList.add("copied");
+        setTimeout(() => { copyBtn.textContent = "Copy citation"; copyBtn.classList.remove("copied"); }, 2000);
+    });
+
     // Back-to-top button
     const toTop = document.getElementById("to-top");
     window.addEventListener("scroll", () => {
