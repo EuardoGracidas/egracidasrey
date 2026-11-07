@@ -23,7 +23,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap" rel="stylesheet">
 
         <script>
             (function () {
@@ -33,62 +33,65 @@
                 document.documentElement.setAttribute("data-theme", t);
             })();
         </script>
-        <link rel="stylesheet" href="index.css?v=17">
-        <script src="i18n-es.js?v=17" defer></script>
-        <script src="index.js?v=17" defer></script>
+        <link rel="stylesheet" href="index.css?v=18">
+        <script src="i18n-es.js?v=18" defer></script>
+        <script src="index.js?v=18" defer></script>
     </head>
     <body>
         <nav id="navbar">
-            <a class="brand" href="#header">Eduardo Gracidas</a>
-            <div class="lang-toggle" role="group" aria-label="Language">
-                <button type="button" data-lang="en" aria-pressed="true">EN</button>
-                <button type="button" data-lang="es" aria-pressed="false">ES</button>
-            </div>
-            <button type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Dark / light mode"><span class="ti-moon">🌙</span><span class="ti-sun">☀️</span></button>
-            <button id="menu-toggle" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+            <a class="brand" href="#header"><span class="mono">EG</span><span class="brand-name">Eduardo Gracidas Reyes</span></a>
             <ul id="nav-links">
                 <li><a href="#about">About me</a></li>
                 <li><a href="#publication">Publication</a></li>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#c2i">C2I</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#affiliations">Affiliations</a></li>
                 <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#life">Photography</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="nav-tools">
+                <div class="lang-toggle" role="group" aria-label="Language">
+                    <button type="button" data-lang="en" aria-pressed="true">EN</button>
+                    <button type="button" data-lang="es" aria-pressed="false">ES</button>
+                </div>
+                <button type="button" class="theme-toggle" aria-label="Toggle dark mode" title="Dark / light mode">
+                    <svg class="ti-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                    <svg class="ti-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+                </button>
+                <button id="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
         </nav>
 
         <header id="header">
-            <div class="hero-text">
-                <h1 id="title">Eduardo Gracidas</h1>
-                <h2>B.Sc. Biomedical Engineer</h2>
-                <h2>M.Sc. Computer Science</h2>
-                <p class="tagline">Biorobotics · Biomechanics · Artificial Intelligence</p>
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <p class="status"><span class="dot"></span>M.Sc. student · Memorial University of Newfoundland</p>
+                    <h1 id="title">Eduardo Gracidas Reyes</h1>
+                    <p class="hero-role">Biomedical Engineer &amp; Computer Scientist</p>
+                    <p class="hero-lede">I design instrumentation, software and data analysis for biorobotics and biomechanics research — from insect-based biohybrid systems to medical devices.</p>
+                    <div class="hero-links">
+                        <a class="btn btn-primary btn-cv" href="cv/Eduardo_Gracidas_Reyes_CV_EN.pdf" target="_blank" rel="noopener">Download CV</a>
+                        <a class="btn btn-ghost" href="#publication">Featured publication</a>
+                    </div>
+                    <div class="socials">
+                        <a href="https://www.linkedin.com/in/eduardo-gracidas-reyes-9a9662331" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2 0-2.3 1.56-2.3 3.2V21H9z"/></svg></a>
+                        <a href="https://scholar.google.ca/citations?user=96jGhLoAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24"><path d="M12 2 1 9l11 7 9-5.7V17h2V9zM5.5 13.4V17c0 1.9 2.9 4 6.5 4s6.5-2.1 6.5-4v-3.6L12 17.6z"/></svg></a>
+                        <a href="https://orcid.org/0009-0002-9145-2792" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><svg viewBox="0 0 24 24"><path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zM8.3 17.2H6.6V8.4h1.7zM7.45 7.3a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1zM18.1 12.8c0 2.6-1.8 4.4-4.6 4.4H10V8.4h3.5c2.8 0 4.6 1.8 4.6 4.4zm-1.75 0c0-1.9-1.1-2.9-3-2.9h-1.6v5.8h1.6c1.9 0 3-1 3-2.9z"/></svg></a>
+                        <a href="https://github.com/EuardoGracidas" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg></a>
+                        <a href="mailto:egracidasrey@mun.ca" aria-label="Email" title="Email"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zm2 2v.5l8 5 8-5V7zm16 2.9-8 5-8-5V17h16z"/></svg></a>
+                    </div>
+                </div>
+                <figure class="hero-photo"><img id="profilepic" src="images/IMG_1266.JPG" alt="Eduardo Gracidas Reyes"></figure>
+            </div>
+            <div class="hero-affil">
+                <span class="affil-label">Affiliations</span>
                 <div id="affiliations-logos">
-                    <img src="images/affiliations/memorial.png" width="120" height="80" alt="Memorial University of Newfoundland">
-                    <img src="images/affiliations/INAOE.png" width="80" height="80" alt="INAOE">
-                    <img src="images/affiliations/udlap.jpg" width="80" height="80" alt="Universidad de las Américas Puebla">
-                </div>
-                <p class="status"><span class="dot"></span>M.Sc. student at Memorial University · St. John’s, NL</p>
-                <div class="hero-links">
-                    <a class="btn btn-gold" href="#publication">Featured publication</a>
-                    <a class="btn btn-outline" href="#contact">Contact me</a>
-                    <a class="btn btn-cv" href="cv/Eduardo_Gracidas_Reyes_CV_EN.pdf" target="_blank" rel="noopener">⬇ Download CV</a>
-                </div>
-                <div class="socials">
-                    <a href="https://www.linkedin.com/in/eduardo-gracidas-reyes-9a9662331" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11 21 14.1V21h-4v-6.1c0-1.45-.03-3.3-2-3.3-2 0-2.3 1.56-2.3 3.2V21H9z"/></svg></a>
-                    <a href="https://github.com/EuardoGracidas" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg></a>
-                    <a href="https://scholar.google.ca/citations?user=96jGhLoAAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24"><path d="M12 2 1 9l11 7 9-5.7V17h2V9zM5.5 13.4V17c0 1.9 2.9 4 6.5 4s6.5-2.1 6.5-4v-3.6L12 17.6z"/></svg></a>
-                    <a href="https://orcid.org/0009-0002-9145-2792" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><svg viewBox="0 0 24 24"><path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zM8.3 17.2H6.6V8.4h1.7zM7.45 7.3a1.05 1.05 0 1 1 0-2.1 1.05 1.05 0 0 1 0 2.1zM18.1 12.8c0 2.6-1.8 4.4-4.6 4.4H10V8.4h3.5c2.8 0 4.6 1.8 4.6 4.4zm-1.75 0c0-1.9-1.1-2.9-3-2.9h-1.6v5.8h1.6c1.9 0 3-1 3-2.9z"/></svg></a>
-                    <a href="mailto:egracidasrey@mun.ca" aria-label="Email" title="Email"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zm2 2v.5l8 5 8-5V7zm16 2.9-8 5-8-5V17h16z"/></svg></a>
-                    <a href="https://doi.org/10.3390/biology15120947" target="_blank" rel="noopener" aria-label="Biology article" title="Biology article"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zm8 1.5V8h4.5zM8 12h10v1.5H8zm0 3h10v1.5H8zm0 3h7v1.5H8z"/></svg></a>
+                    <img src="images/affiliations/memorial.png" alt="Memorial University of Newfoundland">
+                    <img src="images/affiliations/INAOE.png" alt="INAOE">
+                    <img src="images/affiliations/udlap.jpg" alt="Universidad de las Américas Puebla">
                 </div>
             </div>
-            <img id="profilepic" src="images/IMG_1266.JPG" alt="Eduardo Gracidas">
         </header>
-        <div id="separator"></div>
         <div id="progress"></div>
 
         <main>
@@ -125,22 +128,18 @@
                     <div class="sec-head"><span class="eyebrow c-maroon">Right now</span><h1>What I’m doing now</h1><p>A snapshot of my first term as a graduate student in St. John’s.</p></div>
                     <div class="now-grid">
                         <article class="now-card c-maroon">
-                            <span class="now-ic">🎓</span>
                             <h3>M.Sc. in Computer Science</h3>
                             <p>Graduate student at Memorial University of Newfoundland since September 2026, co-supervised by Oscar Meruvia Pastor and Jay Henderson.</p>
                         </article>
                         <article class="now-card c-sky">
-                            <span class="now-ic">📚</span>
                             <h3>Graduate coursework</h3>
                             <p><strong>Algorithms</strong> (COMP 6901) and <strong>Software Engineering</strong> (COMP 6905), where I’m working on a team-based stock-trading simulation project.</p>
                         </article>
                         <article class="now-card c-gold">
-                            <span class="now-ic">🔬</span>
                             <h3>Bridging two worlds</h3>
                             <p>Bringing my experience in instrumentation, biosignals and biorobotics into computer science, from data analysis to full-stack software.</p>
                         </article>
                         <article class="now-card c-teal">
-                            <span class="now-ic">📷</span>
                             <h3>Exploring Newfoundland</h3>
                             <p>Discovering St. John’s through my camera — its harbour, colourful downtown and autumn colours. <a href="#life">See my photos →</a></p>
                         </article>
@@ -205,22 +204,18 @@
                     <h3>Key findings</h3>
                     <div class="findings">
                         <article class="finding c-orange">
-                            <span class="icon">🌡️</span>
                             <h4>A sweet spot near 30 °C</h4>
                             <p>Activity measures such as cumulative activity, peak activity rate and peak modulation tended to rise up to about 30 °C, pointing to a non-linear relationship between temperature and locomotion.</p>
                         </article>
                         <article class="finding c-maroon">
-                            <span class="icon">🔥</span>
                             <h4>Heat fragments movement</h4>
                             <p>At 34 and 38 °C the cockroaches kept their peak activity but spent more time inactive, so their walking became more fragmented instead of sustained.</p>
                         </article>
                         <article class="finding c-sky">
-                            <span class="icon">💡</span>
                             <h4>UV light stands out</h4>
                             <p>In the exploratory illumination assays, UV light was linked to the largest increases in activity and the clearest drop in inactivity; green light had only slight effects. These results are preliminary and need larger samples.</p>
                         </article>
                         <article class="finding c-teal">
-                            <span class="icon">⚖️</span>
                             <h4>Not explained by size or sex</h4>
                             <p>Neither body length nor sex accounted for the main thermal pattern, supporting temperature itself as the driver of the observed changes.</p>
                         </article>
@@ -228,7 +223,7 @@
 
                     <h3>Inside the study</h3>
                     <div class="gallery">
-                        <figure class="vid"><video class="autovid" src="videos/c2i-cockroach-sphere.mp4" poster="videos/c2i-cockroach-sphere.jpg" muted loop playsinline preload="metadata" aria-label="Video: cockroach walking on the spherical treadmill"></video><figcaption>▶ Tethered walking on the spherical treadmill</figcaption></figure>
+                        <figure class="vid"><video class="autovid" src="videos/c2i-cockroach-sphere.mp4" poster="videos/c2i-cockroach-sphere.jpg" muted loop playsinline preload="metadata" aria-label="Video: cockroach walking on the spherical treadmill"></video><figcaption>Tethered walking on the spherical treadmill</figcaption></figure>
                         <figure><img src="images/c2i/treadmill-platform.jpg" alt="Spherical treadmill platform" loading="lazy"><figcaption>The spherical treadmill platform with its support structure</figcaption></figure>
                         <figure><img src="images/c2i/cyborg-cockroach.jpg" alt="Tethered cockroach on the treadmill sphere" loading="lazy"><figcaption>A tethered <em>G. portentosa</em> walking on the sphere</figcaption></figure>
                         <figure><img src="images/research/environment-control-gui.jpg" alt="Software interface of the environmental control system" loading="lazy"><figcaption>Software interface with thermal feed, live plots and environmental controls</figcaption></figure>
@@ -319,13 +314,13 @@
                     <p>Most of my undergraduate research used the Madagascar hissing cockroach (<em>Gromphadorhina portentosa</em>) as a biological platform for biorobotic systems: building controlled-environment instrumentation, tracking locomotion with computer vision, and modelling how temperature, light and electrical stimulation shape the insect’s behaviour.</p></div>
 
                     <div class="interests">
-                        <span class="c-teal">🧠 Cybernetics</span>
-                        <span class="c-orange">🦿 Biomechanics</span>
-                        <span class="c-sky">📟 Instrumentation</span>
-                        <span class="c-maroon">🧬 Bioinformatics</span>
-                        <span class="c-gold">🤖 Biorobotics</span>
-                        <span class="c-teal">🐜 Behaviour-Based AI</span>
-                        <span class="c-sky">⚡ Neurosciences</span>
+                        <span class="c-teal">Cybernetics</span>
+                        <span class="c-orange">Biomechanics</span>
+                        <span class="c-sky">Instrumentation</span>
+                        <span class="c-maroon">Bioinformatics</span>
+                        <span class="c-gold">Biorobotics</span>
+                        <span class="c-teal">Behaviour-Based AI</span>
+                        <span class="c-sky">Neurosciences</span>
                     </div>
 
                     <div class="outputs">
@@ -363,28 +358,28 @@
 
                     <div class="tracks">
                         <div class="track-card c-teal">
-                            <h3>🎤 Conferences</h3>
+                            <h3>Conferences</h3>
                             <ul>
                                 <li>International Conference on Ontologies and Knowledge Graphs <span class="muted">ICOKG 2025</span></li>
                                 <li>Congreso Nacional de Ingeniería Biomédica <span class="muted">CNIB 2025</span></li>
-                                <li>Segundo Congreso Nacional de Ciencia de Datos <span class="medal silver">🥈 2nd place, posters</span></li>
+                                <li>Segundo Congreso Nacional de Ciencia de Datos <span class="medal silver">2nd place, posters</span></li>
                                 <li>II Congreso del Programa de Honores <span class="muted">UDLAP</span></li>
                             </ul>
                         </div>
                         <div class="track-card c-orange">
-                            <h3>🪧 Posters &amp; expositions</h3>
+                            <h3>Posters &amp; expositions</h3>
                             <ul>
                                 <li>Sistema de análisis biomecánico <span class="muted">CNIB 2025</span></li>
-                                <li>Adquisición de datos y modelado estadístico para la caracterización y control de cucarachas cíborg <span class="medal gold">🏆 Winner · IICNNCD</span></li>
+                                <li>Adquisición de datos y modelado estadístico para la caracterización y control de cucarachas cíborg <span class="medal gold">Winner · IICNNCD</span></li>
                                 <li>Sistema de monitoreo de señales biomecánicas <span class="muted">7ª Jornada de Mujeres en la Ciencia</span></li>
-                                <li>Sistema de análisis biomecánico <span class="medal gold">🏆 Winner · EXPOCEM 2025</span></li>
+                                <li>Sistema de análisis biomecánico <span class="medal gold">Winner · EXPOCEM 2025</span></li>
                                 <li>Análisis biomecánico de pacientes con Genu Valgo <span class="muted">EXPOCEM 2024</span></li>
                             </ul>
                         </div>
                         <div class="track-card c-gold">
-                            <h3>🏅 Competitions</h3>
+                            <h3>Competitions</h3>
                             <ul>
-                                <li>3er. Concurso estudiantil para generación de aplicaciones biomédicas a partir del procesamiento y análisis de bioseñales (Silldromo 2025), INAOE <span class="medal bronze">🥉 3rd place</span></li>
+                                <li>3er. Concurso estudiantil para generación de aplicaciones biomédicas a partir del procesamiento y análisis de bioseñales (Silldromo 2025), INAOE <span class="medal bronze">3rd place</span></li>
                             </ul>
                         </div>
                     </div>
@@ -402,7 +397,7 @@
                             <div class="gallery single-slider">
                                 <figure><img src="images/projects/smart-pillbox.jpg" alt="Smart pillbox device" loading="lazy"><figcaption>The pillbox prototype with its TFT display</figcaption></figure>
                                 <figure><img src="images/projects/smartdose-app.jpg" alt="SmartDose mobile app" loading="lazy"><figcaption>SmartDose companion app</figcaption></figure>
-                                <figure class="vid tall"><video src="videos/smartdose-app.mp4" poster="videos/smartdose-app.jpg" controls playsinline preload="none" aria-label="Video: SmartDose app walkthrough"></video><figcaption>▶ SmartDose app walkthrough</figcaption></figure>
+                                <figure class="vid tall"><video src="videos/smartdose-app.mp4" poster="videos/smartdose-app.jpg" controls playsinline preload="none" aria-label="Video: SmartDose app walkthrough"></video><figcaption>SmartDose app walkthrough</figcaption></figure>
                             </div>
                         </div>
                         <div class="feature-text">
@@ -417,7 +412,7 @@
                     <article class="feature reverse">
                         <div class="feature-media">
                             <div class="gallery single-slider">
-                                <figure class="vid"><video src="videos/iomt-demo.mp4" poster="videos/iomt-demo.jpg" controls playsinline preload="none" aria-label="Video: IoMT system demonstration"></video><figcaption>▶ Live demonstration of the IoMT system</figcaption></figure>
+                                <figure class="vid"><video src="videos/iomt-demo.mp4" poster="videos/iomt-demo.jpg" controls playsinline preload="none" aria-label="Video: IoMT system demonstration"></video><figcaption>Live demonstration of the IoMT system</figcaption></figure>
                                 <figure><img src="images/projects/iomt-interface.jpg" alt="IoMT control interface with live video and remote ECG" loading="lazy"><figcaption>Control interface with live video and remote ECG</figcaption></figure>
                                 <figure><img src="images/projects/eeg-cap.jpg" alt="EEG cap on a mannequin head" loading="lazy"><figcaption>Sensor cap prototype</figcaption></figure>
                                 <figure><img src="images/projects/eeg-setup.jpg" alt="EEG acquisition setup" loading="lazy"><figcaption>Acquisition setup</figcaption></figure>
@@ -502,7 +497,7 @@
 
                     <h3>From the lab</h3>
                     <div class="gallery">
-                        <figure class="vid"><video class="autovid" src="videos/c2i-cockroach-sphere.mp4" poster="videos/c2i-cockroach-sphere.jpg" muted loop playsinline preload="metadata" aria-label="Video: cockroach walking on the spherical treadmill"></video><figcaption>▶ Tethered cockroach walking on the spherical treadmill</figcaption></figure>
+                        <figure class="vid"><video class="autovid" src="videos/c2i-cockroach-sphere.mp4" poster="videos/c2i-cockroach-sphere.jpg" muted loop playsinline preload="metadata" aria-label="Video: cockroach walking on the spherical treadmill"></video><figcaption>Tethered cockroach walking on the spherical treadmill</figcaption></figure>
                         <figure><img src="images/c2i/cyborg-cockroach.jpg" alt="Cyborg cockroach with electronic backpack on a sphere" loading="lazy"><figcaption>Cyborg <em>G. portentosa</em> on the spherical treadmill</figcaption></figure>
                         <figure><img src="images/c2i/treadmill-platform.jpg" alt="3D-printed treadmill platform" loading="lazy"><figcaption>Controlled-environment treadmill platform</figcaption></figure>
                         <figure><img src="images/c2i/cockroach-sphere.jpg" alt="Cockroach walking on the sphere" loading="lazy"><figcaption>Tethered locomotion test</figcaption></figure>
@@ -516,27 +511,27 @@
                     <div class="sec-head"><span class="eyebrow c-gold">Skills</span><h1>My toolkit</h1><p>From the lab bench to the backend: the tools I use to build instruments, analyze data and ship software.</p></div>
                     <div class="skill-grid">
                         <article class="skill-card c-orange">
-                            <header><span class="sk-ic">💻</span><h3>Software engineering</h3></header>
+                            <header><h3>Software engineering</h3></header>
                             <div class="tags"><span>JavaScript</span><span>Node.js</span><span>Express</span><span>ViteExpress</span><span>REST APIs</span><span>OpenAPI</span><span>JSDoc</span><span>Automated testing</span><span>Software architecture</span><span>HTML &amp; CSS</span></div>
                         </article>
                         <article class="skill-card c-sky">
-                            <header><span class="sk-ic">🗄️</span><h3>Data &amp; databases</h3></header>
+                            <header><h3>Data &amp; databases</h3></header>
                             <div class="tags"><span>MongoDB Atlas</span><span>Native MongoDB driver</span><span>Market-data APIs</span><span>Plotly.js</span><span>Data visualization</span><span>Technical documentation</span></div>
                         </article>
                         <article class="skill-card c-gold">
-                            <header><span class="sk-ic">📊</span><h3>Scientific computing</h3></header>
+                            <header><h3>Scientific computing</h3></header>
                             <div class="tags"><span>Python</span><span>Jupyter</span><span>PyWaffle</span><span>Signal processing</span><span>Mixed-effects models</span><span>Non-parametric statistics</span><span>Computer vision</span><span>Machine learning</span></div>
                         </article>
                         <article class="skill-card c-maroon">
-                            <header><span class="sk-ic">🔌</span><h3>Biomedical engineering</h3></header>
+                            <header><h3>Biomedical engineering</h3></header>
                             <div class="tags"><span>Instrumentation</span><span>Embedded systems</span><span>Microcontrollers</span><span>Biosignal acquisition</span><span>Thermal imaging</span><span>Environmental control</span><span>Biomechanical analysis</span><span>Medical imaging</span></div>
                         </article>
                         <article class="skill-card c-teal">
-                            <header><span class="sk-ic">🛠️</span><h3>Workflow</h3></header>
+                            <header><h3>Workflow</h3></header>
                             <div class="tags"><span>Git</span><span>GitHub</span><span>Team projects</span><span>Scientific writing</span><span>Peer review</span><span>Poster &amp; oral presentations</span></div>
                         </article>
                         <article class="skill-card c-orange langs">
-                            <header><span class="sk-ic">🌎</span><h3>Languages</h3></header>
+                            <header><h3>Languages</h3></header>
                             <div class="lang-row"><span>Spanish</span><div class="bar"><i style="width:100%"></i></div><em>Native</em></div>
                             <div class="lang-row"><span>English</span><div class="bar"><i style="width:85%"></i></div><em>Professional working</em></div>
                         </article>
@@ -557,7 +552,7 @@
                         <div class="memorial-text">
                             <img class="inst-logo" src="images/affiliations/memorial.png" alt="Memorial University logo">
                             <h3>Memorial University of Newfoundland</h3>
-                            <div class="facts"><span>📍 St. John’s, NL, Canada</span><span>🎓 M.Sc. Computer Science</span><span>🗓️ Since Sep 2026</span><span>⭐ Fully funded</span></div>
+                            <div class="facts"><span>St. John’s, NL, Canada</span><span>M.Sc. Computer Science</span><span>Since Sep 2026</span><span>Fully funded</span></div>
                             <p>
                                 In September 2026 I moved to St. John’s, Newfoundland and Labrador, to start my Master’s degree in Computer Science at Memorial University, supported by a fully funded scholarship. Memorial is the largest university in Atlantic Canada, and its campus — from the iconic clock tower to the Core Science Facility — is now where I continue building on my background in biomedical engineering and research with advanced training in computing.
                             </p>
@@ -652,10 +647,10 @@
                     <p class="lead">Certificates, awards and acceptance letters collected along the way. Swipe or use the arrows, and click any certificate to enlarge it.</p>
                     <div class="filters" role="tablist">
                         <button class="active" data-filter="all">All</button>
-                        <button data-filter="award">🏆 Awards</button>
-                        <button data-filter="pub">📄 Publication</button>
-                        <button data-filter="course">🎓 Courses</button>
-                        <button data-filter="event">🎤 Events</button>
+                        <button data-filter="award">Awards</button>
+                        <button data-filter="pub">Publication</button>
+                        <button data-filter="course">Courses</button>
+                        <button data-filter="event">Events</button>
                     </div>
                     <div class="certs">
                         <figure class="cert" data-cat="pub"><img src="images/certs/mdpi-publication.jpg" alt="Certificate of publication, Biology (MDPI)" loading="lazy"><figcaption><span class="date">Nov 2026</span><strong>Certificate of Publication, Editor’s Choice</strong> — <em>Biology</em> (MDPI)</figcaption></figure>
@@ -708,11 +703,11 @@
                     </div>
 
                     <div class="hobbies">
-                        <article class="hobby c-sky"><span class="hb-ic">📷</span><h3>Photography</h3><p>Shooting with a Canon EOS R50 — landscapes, city nights and telephoto experiments.</p></article>
-                        <article class="hobby c-orange"><span class="hb-ic">♟️</span><h3>Strategy games</h3><p>A long-time fan of grand strategy, especially <em>Age of History II</em> and <em>Age of History 3</em>.</p></article>
-                        <article class="hobby c-maroon"><span class="hb-ic">📖</span><h3>Reading</h3><p>Reading is how I unwind and keep learning outside the classroom.</p></article>
-                        <article class="hobby c-gold"><span class="hb-ic">🎧</span><h3>Music</h3><p>Always listening to something while I work, study or explore the city.</p></article>
-                        <article class="hobby c-teal"><span class="hb-ic">⌨️</span><h3>Programming</h3><p>Coding isn’t only work for me — I enjoy building side projects just for fun.</p></article>
+                        <article class="hobby c-sky"><h3>Photography</h3><p>Shooting with a Canon EOS R50 — landscapes, city nights and telephoto experiments.</p></article>
+                        <article class="hobby c-orange"><h3>Strategy games</h3><p>A long-time fan of grand strategy, especially <em>Age of History II</em> and <em>Age of History 3</em>.</p></article>
+                        <article class="hobby c-maroon"><h3>Reading</h3><p>Reading is how I unwind and keep learning outside the classroom.</p></article>
+                        <article class="hobby c-gold"><h3>Music</h3><p>Always listening to something while I work, study or explore the city.</p></article>
+                        <article class="hobby c-teal"><h3>Programming</h3><p>Coding isn’t only work for me — I enjoy building side projects just for fun.</p></article>
                     </div>
                 </div>
             </section>
@@ -723,13 +718,13 @@
                     <div class="sec-head center"><span class="eyebrow c-gold">Contact</span><h1>Let’s work together</h1>
                     <p>Interested in collaborating, in biorobotics, or in the Cyborg Insects Initiative? I’m always happy to talk about research.</p></div>
                     <div class="contact-cards">
-                        <a class="contact-card" href="cv/Eduardo_Gracidas_Reyes_CV_EN.pdf" target="_blank" rel="noopener"><span class="ic">📄</span><strong>Curriculum vitae</strong><span>PDF · 2 pages</span></a>
-                        <a class="contact-card" href="mailto:egracidasrey@mun.ca"><span class="ic">✉️</span><strong>University email</strong><span>egracidasrey@mun.ca</span></a>
-                        <a class="contact-card" href="https://www.linkedin.com/in/eduardo-gracidas-reyes-9a9662331" target="_blank" rel="noopener"><span class="ic">💼</span><strong>LinkedIn</strong><span>Eduardo Gracidas Reyes</span></a>
-                        <a class="contact-card" href="https://github.com/EuardoGracidas" target="_blank" rel="noopener"><span class="ic">🐙</span><strong>GitHub</strong><span>EuardoGracidas</span></a>
-                        <a class="contact-card" href="https://scholar.google.ca/citations?user=96jGhLoAAAAJ&amp;hl=en" target="_blank" rel="noopener"><span class="ic">🎓</span><strong>Google Scholar</strong><span>Publications &amp; citations</span></a>
-                        <a class="contact-card" href="https://orcid.org/0009-0002-9145-2792" target="_blank" rel="noopener"><span class="ic">🆔</span><strong>ORCID</strong><span>0009-0002-9145-2792</span></a>
-                        <a class="contact-card" href="https://doi.org/10.3390/biology15120947" target="_blank" rel="noopener"><span class="ic">📄</span><strong>Latest article</strong><span><em>Biology</em> 2026, 15(12), 947</span></a>
+                        <a class="contact-card" href="cv/Eduardo_Gracidas_Reyes_CV_EN.pdf" target="_blank" rel="noopener"><strong>Curriculum vitae</strong><span>PDF · 2 pages</span></a>
+                        <a class="contact-card" href="mailto:egracidasrey@mun.ca"><strong>University email</strong><span>egracidasrey@mun.ca</span></a>
+                        <a class="contact-card" href="https://www.linkedin.com/in/eduardo-gracidas-reyes-9a9662331" target="_blank" rel="noopener"><strong>LinkedIn</strong><span>Eduardo Gracidas Reyes</span></a>
+                        <a class="contact-card" href="https://github.com/EuardoGracidas" target="_blank" rel="noopener"><strong>GitHub</strong><span>EuardoGracidas</span></a>
+                        <a class="contact-card" href="https://scholar.google.ca/citations?user=96jGhLoAAAAJ&amp;hl=en" target="_blank" rel="noopener"><strong>Google Scholar</strong><span>Publications &amp; citations</span></a>
+                        <a class="contact-card" href="https://orcid.org/0009-0002-9145-2792" target="_blank" rel="noopener"><span class="ic"></span><strong>ORCID</strong><span>0009-0002-9145-2792</span></a>
+                        <a class="contact-card" href="https://doi.org/10.3390/biology15120947" target="_blank" rel="noopener"><strong>Latest article</strong><span><em>Biology</em> 2026, 15(12), 947</span></a>
                     </div>
                 </div>
             </section>
@@ -737,7 +732,6 @@
 
         <footer>
             <div class="visit-counter" hidden>
-                <span class="eye" aria-hidden="true">👁️</span>
                 <strong id="visit-count">—</strong>
                 <span id="visit-label">unique visitors</span>
             </div>
