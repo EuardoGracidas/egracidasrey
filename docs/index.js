@@ -146,6 +146,41 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Thumbnail strip under the Moments showcase
+    document.querySelectorAll(".carousel.showcase").forEach(wrap => {
+        const track = wrap.querySelector(".carousel-track");
+        const figs = [...track.children];
+        const strip = document.createElement("div");
+        strip.className = "thumbs";
+        figs.forEach((f, i) => {
+            const b = document.createElement("button");
+            b.setAttribute("aria-label", "Show photo " + (i + 1));
+            const im = f.querySelector("img");
+            b.innerHTML = `<img src="${im.getAttribute("src")}" alt="" loading="lazy">`;
+            b.addEventListener("click", () => track.scrollTo({ left: i * track.clientWidth }));
+            strip.appendChild(b);
+        });
+        wrap.after(strip);
+        const mark = () => {
+            const i = Math.round(track.scrollLeft / track.clientWidth);
+            [...strip.children].forEach((b, k) => b.classList.toggle("active", k === i));
+            const act = strip.children[i];
+            if (act) strip.scrollTo({ left: act.offsetLeft - strip.clientWidth / 2 + act.clientWidth / 2, behavior: "smooth" });
+        };
+        track.addEventListener("scroll", () => requestAnimationFrame(mark), { passive: true });
+        mark();
+    });
+
+    // Certificate filters
+    const certTrack = document.querySelector(".certs");
+    document.querySelectorAll(".filters button").forEach(btn => btn.addEventListener("click", () => {
+        document.querySelectorAll(".filters button").forEach(b => b.classList.toggle("active", b === btn));
+        const f = btn.dataset.filter;
+        certTrack.querySelectorAll(".cert").forEach(c => c.classList.toggle("hidden", f !== "all" && c.dataset.cat !== f));
+        certTrack.scrollTo({ left: 0, behavior: "auto" });
+        window.dispatchEvent(new Event("resize"));
+    }));
+
     // Lightbox for gallery, card and certificate images
     const zoomables = [...document.querySelectorAll(".gallery img, .card-imgs img, .card-carousel img, .cert img, .c2i-logo, .framed img, .advance img, .memorial-portrait img, .docs img")];
     const lb = document.createElement("div");
@@ -158,8 +193,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const lbImg = lb.querySelector("img");
     const lbCap = lb.querySelector("p");
     let current = 0;
-    const show = i => {
+    const show = (i, dir = 1) => {
         current = (i + zoomables.length) % zoomables.length;
+        if (zoomables[current].closest(".cert.hidden")) {
+            let guard = zoomables.length;
+            while (zoomables[current].closest(".cert.hidden") && guard--) current = (current + dir + zoomables.length) % zoomables.length;
+        }
         const img = zoomables[current];
         lbImg.src = img.src;
         lbImg.alt = img.alt;
@@ -170,12 +209,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const close = () => lb.classList.remove("open");
     zoomables.forEach((img, i) => img.addEventListener("click", () => show(i)));
     lb.addEventListener("click", e => { if (e.target === lb || e.target === lbImg || e.target.id === "lb-close") close(); });
-    lb.querySelector("#lb-prev").addEventListener("click", e => { e.stopPropagation(); show(current - 1); });
+    lb.querySelector("#lb-prev").addEventListener("click", e => { e.stopPropagation(); show(current - 1, -1); });
     lb.querySelector("#lb-next").addEventListener("click", e => { e.stopPropagation(); show(current + 1); });
     document.addEventListener("keydown", e => {
         if (!lb.classList.contains("open")) return;
         if (e.key === "Escape") close();
-        if (e.key === "ArrowLeft") show(current - 1);
+        if (e.key === "ArrowLeft") show(current - 1, -1);
         if (e.key === "ArrowRight") show(current + 1);
     });
 

@@ -10,8 +10,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="index.css?v=9">
-        <script src="index.js?v=9" defer></script>
+        <link rel="stylesheet" href="index.css?v=10">
+        <script src="index.js?v=10" defer></script>
     </head>
     <body>
         <nav id="navbar">
@@ -53,9 +53,9 @@
 
         <main>
             <!-- ABOUT -->
-            <section id="about" class="paragraph1 bg-cream accent-orange reveal">
+            <section id="about" class="paragraph1 sec-light reveal">
                 <div class="container">
-                    <h1>Brief profile</h1>
+                    <div class="sec-head"><span class="eyebrow c-orange">About me</span><h1>Brief profile</h1><p>Biomedical engineer turned computer scientist, from Puebla to St. John’s.</p></div>
                     <div class="split">
                         <div>
                             <p>
@@ -82,7 +82,7 @@
             <!-- PUBLICATION -->
             <section id="publication" class="paragraph1 pub reveal">
                 <div class="container">
-                    <h1>Featured publication</h1>
+                    <div class="sec-head"><span class="eyebrow c-gold">Publication</span><h1>Featured publication</h1></div>
 
                     <a class="pub-banner" href="https://www.mdpi.com/2079-7737/15/12/947" target="_blank" rel="noopener">
                         <img src="images/publication/biology-banner.jpg" alt="Biology (MDPI) article banner: Temperature-Dependent Tethered Locomotion Behavior in the Madagascar Hissing Cockroach">
@@ -179,9 +179,9 @@
             </section>
 
             <!-- MOMENTS -->
-            <section id="moments" class="paragraph1 bg-sky accent-sky reveal">
+            <section id="moments" class="paragraph1 sec-sky reveal">
                 <div class="container">
-                    <h1>Moments</h1>
+                    <div class="sec-head"><span class="eyebrow c-sky">Moments</span><h1>Moments along the way</h1></div>
                     <p class="lead">A few snapshots from expos, poster sessions, award ceremonies and long days in the lab during my undergraduate years.</p>
                     <div class="gallery showcase" data-autoplay="5000">
                         <figure><img src="images/gallery/udlap-expo-stand.jpg" alt="Presenting at a UDLAP expo stand" loading="lazy"><figcaption>Presenting a biomechanics project at EXPOCEM, UDLAP</figcaption></figure>
@@ -201,108 +201,118 @@
             </section>
 
             <!-- EDUCATION -->
-            <section id="education" class="paragraph1 bg-cream accent-gold reveal">
+            <section id="education" class="paragraph1 sec-light reveal">
                 <div class="container">
-                    <h1>Education</h1>
+                    <div class="sec-head"><span class="eyebrow c-gold">Education</span><h1>Where I’ve studied</h1><p>From biomedical engineering in Puebla to computer science in Newfoundland.</p></div>
                     <div class="degrees">
-                        <article class="degree c-maroon">
-                            <img src="images/affiliations/memorial.png" alt="Memorial University logo">
-                            <div>
-                                <span class="date">September 2026 – present</span>
-                                <h3>M.Sc. Computer Science</h3>
-                                <p>Memorial University of Newfoundland, St. John’s, Canada. Graduate studies supported by a fully funded scholarship, building on my biomedical and research background with advanced training in computer science.</p>
-                            </div>
+                        <article class="degree-card maroon">
+                            <header>
+                                <img src="images/affiliations/memorial.png" alt="Memorial University logo">
+                                <div><span class="d">Sep 2026 – present</span><span class="where">St. John’s, Canada</span></div>
+                            </header>
+                            <h3>M.Sc. Computer Science</h3>
+                            <p class="inst-name">Memorial University of Newfoundland</p>
+                            <p>Graduate studies supported by a fully funded scholarship, supervised by Oscar Meruvia Pastor and Jay Henderson. A step to bring my biomedical and research background together with advanced training in computing.</p>
+                            <div class="chips small"><span class="c-maroon">Fully funded</span><span class="c-sky">Graduate research</span></div>
                         </article>
-                        <article class="degree c-orange">
-                            <img src="images/affiliations/udlap.jpg" alt="UDLAP logo">
-                            <div>
-                                <span class="date">2022 – 2026</span>
-                                <h3>B.Sc. Biomedical Engineering <span class="tag">Summa cum laude</span></h3>
-                                <p>Universidad de las Américas Puebla, Mexico. Member of the UDLAP Honors Program since 2023, with an active research path in biomechanics, instrumentation and biorobotics.</p>
-                            </div>
+                        <article class="degree-card orange">
+                            <header>
+                                <img src="images/affiliations/udlap.jpg" alt="UDLAP logo">
+                                <div><span class="d">2022 – 2026</span><span class="where">Puebla, Mexico</span></div>
+                            </header>
+                            <h3>B.Sc. Biomedical Engineering</h3>
+                            <p class="inst-name">Universidad de las Américas Puebla</p>
+                            <p>Graduated <em>summa cum laude</em>. Member of the UDLAP Honors Program since 2023, with an active research path in biomechanics, instrumentation and biorobotics that led to a Q1 journal article.</p>
+                            <div class="chips small"><span class="c-gold">Summa cum laude</span><span class="c-orange">Honors Program</span></div>
                         </article>
                     </div>
-                    <h3>Complementary training</h3>
-                    <ul class="timeline two-col-list">
-                        <li><span class="date">2025</span><strong>Diploma in Neurolearning</strong> (100 hours)<span class="where">Universidad Anáhuac Puebla</span></li>
-                        <li><span class="date">2025</span><strong>Bachelor’s Master Classes</strong><span class="where">Boston Scientific</span></li>
-                        <li><span class="date">2025</span><strong>Artificial Intelligence in Global Health Research</strong> (MSC1125H)<span class="where">University of Toronto</span></li>
-                        <li><span class="date">2025</span><strong>Startups in the Medical Sciences</strong> (MSC1122H)<span class="where">University of Toronto</span></li>
-                        <li><span class="date">2025</span><strong>Wearable Sensors for Cardiorespiratory Monitoring</strong><span class="where">IEEE Continuing Education</span></li>
-                        <li><span class="date">2025</span><strong>Focus on Peer Review</strong><span class="where">Nature Masterclasses</span></li>
-                        <li><span class="date">2023</span><strong>Artificial Intelligence in Medicine</strong> (MSC1114H)<span class="where">University of Toronto</span></li>
-                    </ul>
+
+                    <h3 class="sub">Complementary training</h3>
+                    <div class="courses">
+                        <div class="course c-maroon"><span class="yr">2025</span><strong>Diploma in Neurolearning</strong><span class="org">Universidad Anáhuac Puebla · 100 h</span></div>
+                        <div class="course c-sky"><span class="yr">2025</span><strong>Bachelor’s Master Classes</strong><span class="org">Boston Scientific</span></div>
+                        <div class="course c-teal"><span class="yr">2025</span><strong>AI in Global Health Research</strong><span class="org">University of Toronto · MSC1125H</span></div>
+                        <div class="course c-teal"><span class="yr">2025</span><strong>Startups in the Medical Sciences</strong><span class="org">University of Toronto · MSC1122H</span></div>
+                        <div class="course c-orange"><span class="yr">2025</span><strong>Wearable Sensors for Cardiorespiratory Monitoring</strong><span class="org">IEEE Continuing Education</span></div>
+                        <div class="course c-gold"><span class="yr">2025</span><strong>Focus on Peer Review</strong><span class="org">Nature Masterclasses</span></div>
+                        <div class="course c-teal"><span class="yr">2023</span><strong>AI in Medicine</strong><span class="org">University of Toronto · MSC1114H</span></div>
+                    </div>
                 </div>
             </section>
 
             <!-- RESEARCH -->
-            <section id="research" class="paragraph1 bg-mint accent-teal reveal">
+            <section id="research" class="paragraph1 sec-tint reveal">
                 <div class="container">
-                    <h1>Research</h1>
-                    <p class="lead">
-                        My research sits at the intersection of biology, engineering and computing. Most of my undergraduate work focused on the Madagascar hissing cockroach (<em>Gromphadorhina portentosa</em>) as a biological platform for biorobotic systems: building controlled-environment instrumentation, tracking locomotion with computer vision, and modelling how temperature, light and electrical stimulation shape the insect’s behaviour.
-                    </p>
+                    <div class="sec-head"><span class="eyebrow c-teal">Research</span><h1>Biology meets engineering and computing</h1>
+                    <p>Most of my undergraduate research used the Madagascar hissing cockroach (<em>Gromphadorhina portentosa</em>) as a biological platform for biorobotic systems: building controlled-environment instrumentation, tracking locomotion with computer vision, and modelling how temperature, light and electrical stimulation shape the insect’s behaviour.</p></div>
 
-                    <h3>Interests</h3>
-                    <div class="chips">
-                        <span class="c-teal">Cybernetics</span>
-                        <span class="c-orange">Biomechanics</span>
-                        <span class="c-sky">Instrumentation</span>
-                        <span class="c-maroon">Bioinformatics</span>
-                        <span class="c-gold">Biorobotics</span>
-                        <span class="c-teal">Behaviour-Based Artificial Intelligence</span>
-                        <span class="c-sky">Neurosciences</span>
+                    <div class="interests">
+                        <span class="c-teal">🧠 Cybernetics</span>
+                        <span class="c-orange">🦿 Biomechanics</span>
+                        <span class="c-sky">📟 Instrumentation</span>
+                        <span class="c-maroon">🧬 Bioinformatics</span>
+                        <span class="c-gold">🤖 Biorobotics</span>
+                        <span class="c-teal">🐜 Behaviour-Based AI</span>
+                        <span class="c-sky">⚡ Neurosciences</span>
+                    </div>
+
+                    <div class="outputs">
+                        <div class="out c-sky"><span class="n">1</span><span class="l">Q1 journal article</span></div>
+                        <div class="out c-maroon"><span class="n">2</span><span class="l">book chapters</span></div>
+                        <div class="out c-teal"><span class="n">4</span><span class="l">conferences</span></div>
+                        <div class="out c-orange"><span class="n">5</span><span class="l">posters &amp; expositions</span></div>
+                        <div class="out c-gold"><span class="n">4</span><span class="l">awards</span></div>
                     </div>
 
                     <div class="feature">
                         <div class="feature-media">
-                            <div class="gallery single-slider" data-autoplay="6000">
-                                <figure><img src="images/research/biology-article.jpg" alt="First page of the Biology article" loading="lazy"><figcaption>Article in <em>Biology</em> (MDPI)</figcaption></figure>
-                                <figure><img src="images/research/preprint.jpg" alt="Preprint page" loading="lazy"><figcaption>Preprint of the locomotion quantification method</figcaption></figure>
+                            <div class="gallery single-slider" data-autoplay="6500">
+                                <figure><img src="images/research/thermal-tracking.jpg" alt="Thermal video frame tracking the cockroach" loading="lazy"><figcaption>Thermal recording: cockroach tracking and temperature map</figcaption></figure>
+                                <figure><img src="images/research/environment-control-gui.jpg" alt="Environmental control system interface" loading="lazy"><figcaption>Environmental control interface for the treadmill experiments</figcaption></figure>
+                                <figure><img src="images/research/locomotion-correlations.jpg" alt="Locomotion correlation plots" loading="lazy"><figcaption>Locomotion vs. temperature correlations</figcaption></figure>
                                 <figure><img src="images/research/book-chapter.jpg" alt="Book chapter page" loading="lazy"><figcaption>Book chapter on cyborg hissing cockroaches</figcaption></figure>
+                                <figure><img src="images/research/preprint.jpg" alt="Preprint page" loading="lazy"><figcaption>Preprint of the locomotion quantification method</figcaption></figure>
+                                <figure><img src="images/research/brain-mapping.jpg" alt="Brain activity mapping figure" loading="lazy"><figcaption>Brain activity mapping</figcaption></figure>
                             </div>
                         </div>
                         <div class="feature-text">
-                            <h3>Journal article</h3>
-                            <p>
-                                My main publication, in <em>Biology</em> (MDPI, Q1), presents the controlled-environment treadmill platform built at INAOE and the thermal and light-dependent locomotion of <em>G. portentosa</em>. It was selected as an <strong>Editor’s Choice</strong> article — see the <a href="#publication">featured publication</a> above for the full story.
-                            </p>
+                            <div class="pub-mini">
+                                <span class="kicker c-gold">Editor’s Choice · Q1</span>
+                                <p><strong>Temperature-Dependent Tethered Locomotion Behavior in the Madagascar Hissing Cockroach…</strong> <em>Biology</em> 2026, 15(12), 947.</p>
+                                <a href="#publication">See the featured publication →</a>
+                            </div>
                             <h3>Book chapters</h3>
-                            <ul class="list">
+                            <ul class="list book">
                                 <li><em>Adquisición de datos para el análisis de la locomoción de Gromphadorhina portentosa bajo distintas condiciones térmicas.</em></li>
                                 <li><em>Advances in the Design and Control of Cyborg Hissing Cockroaches: Machine Learning, Motion Tracking, and Temperature Control with a Perspective on Search and Rescue Operations.</em></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="feature reverse">
-                        <div class="feature-media">
-                            <div class="gallery single-slider" data-autoplay="6500">
-                                <figure><img src="images/research/thermal-tracking.jpg" alt="Thermal video frame tracking the cockroach" loading="lazy"><figcaption>Thermal recording: cockroach tracking and temperature map</figcaption></figure>
-                                <figure><img src="images/research/environment-control-gui.jpg" alt="Environmental control system interface" loading="lazy"><figcaption>Environmental control interface for the treadmill experiments</figcaption></figure>
-                                <figure><img src="images/research/locomotion-correlations.jpg" alt="Locomotion correlation plots" loading="lazy"><figcaption>Locomotion vs. temperature correlations</figcaption></figure>
-                                <figure><img src="images/research/brain-mapping.jpg" alt="Brain activity mapping figure" loading="lazy"><figcaption>Brain activity mapping</figcaption></figure>
-                            </div>
+                    <div class="tracks">
+                        <div class="track-card c-teal">
+                            <h3>🎤 Conferences</h3>
+                            <ul>
+                                <li>International Conference on Ontologies and Knowledge Graphs <span class="muted">ICOKG 2025</span></li>
+                                <li>Congreso Nacional de Ingeniería Biomédica <span class="muted">CNIB 2025</span></li>
+                                <li>Segundo Congreso Nacional de Ciencia de Datos <span class="medal silver">🥈 2nd place, posters</span></li>
+                                <li>II Congreso del Programa de Honores <span class="muted">UDLAP</span></li>
+                            </ul>
                         </div>
-                        <div class="feature-text">
-                            <h3>Conferences</h3>
-                            <ul class="list">
-                                <li>International Conference on Ontologies and Knowledge Graphs (ICOKG 2025).</li>
-                                <li>Congreso Nacional de Ingeniería Biomédica (CNIB 2025).</li>
-                                <li>Segundo Congreso Nacional de Ciencia de Datos — <span class="badge c-gold">2nd place, poster competition</span></li>
-                                <li>II Congreso del Programa de Honores UDLAP.</li>
+                        <div class="track-card c-orange">
+                            <h3>🪧 Posters &amp; expositions</h3>
+                            <ul>
+                                <li>Sistema de análisis biomecánico <span class="muted">CNIB 2025</span></li>
+                                <li>Adquisición de datos y modelado estadístico para la caracterización y control de cucarachas cíborg <span class="medal gold">🏆 Winner · IICNNCD</span></li>
+                                <li>Sistema de monitoreo de señales biomecánicas <span class="muted">7ª Jornada de Mujeres en la Ciencia</span></li>
+                                <li>Sistema de análisis biomecánico <span class="medal gold">🏆 Winner · EXPOCEM 2025</span></li>
+                                <li>Análisis biomecánico de pacientes con Genu Valgo <span class="muted">EXPOCEM 2024</span></li>
                             </ul>
-                            <h3>Posters and expositions</h3>
-                            <ul class="list">
-                                <li>Sistema de análisis biomecánico (CNIB 2025).</li>
-                                <li>Adquisición de datos y modelado estadístico para la caracterización y control de cucarachas cíborg (IICNNCD) — <span class="badge c-gold">Winner</span></li>
-                                <li>Sistema de monitoreo de señales biomecánicas (7ª Jornada de Mujeres en la Ciencia).</li>
-                                <li>Sistema de análisis biomecánico (EXPOCEM 2025) — <span class="badge c-gold">Winner</span></li>
-                                <li>Análisis biomecánico de pacientes con Genu Valgo (EXPOCEM 2024).</li>
-                            </ul>
-                            <h3>Competitions</h3>
-                            <ul class="list">
-                                <li>3er. Concurso estudiantil para generación de aplicaciones biomédicas a partir del procesamiento y análisis de bioseñales (Silldromo 2025), INAOE — <span class="badge c-orange">3rd place</span></li>
+                        </div>
+                        <div class="track-card c-gold">
+                            <h3>🏅 Competitions</h3>
+                            <ul>
+                                <li>3er. Concurso estudiantil para generación de aplicaciones biomédicas a partir del procesamiento y análisis de bioseñales (Silldromo 2025), INAOE <span class="medal bronze">🥉 3rd place</span></li>
                             </ul>
                         </div>
                     </div>
@@ -310,9 +320,9 @@
             </section>
 
             <!-- PROJECTS -->
-            <section id="projects" class="paragraph1 bg-cream accent-maroon reveal">
+            <section id="projects" class="paragraph1 sec-light reveal">
                 <div class="container">
-                    <h1>Projects</h1>
+                    <div class="sec-head"><span class="eyebrow c-maroon">Projects</span><h1>Things I’ve built</h1></div>
                     <p class="lead">Engineering projects developed during my bachelor’s degree, from medical devices to signal processing and medical imaging.</p>
 
                     <article class="feature">
@@ -323,6 +333,7 @@
                             </div>
                         </div>
                         <div class="feature-text">
+                            <span class="pnum">01</span>
                             <span class="kicker c-maroon">Medical device</span>
                             <h3>Semi-portable Smart Pillbox for improving medical adherence in Polypharmacy Patients</h3>
                             <p>Patients who take many medications at once often miss or mix up doses. This semi-portable pillbox addresses that with an automatic dispensing mechanism with 21 compartments, audiovisual alarms and a TFT display for real-time monitoring. A cross-platform mobile application (SmartDose) lets the user or a caregiver schedule medications and manage the device.</p>
@@ -339,6 +350,7 @@
                             </div>
                         </div>
                         <div class="feature-text">
+                            <span class="pnum">02</span>
                             <span class="kicker c-sky">Internet of Medical Things</span>
                             <h3>IoMT system for surgery and remote monitoring</h3>
                             <p>A connected system designed to acquire physiological signals and make them available remotely, supporting both surgical environments and the follow-up of patients outside the hospital.</p>
@@ -351,6 +363,7 @@
                             <figure class="framed"><img src="images/projects/parkinson-signal.jpg" alt="Signal plot used for Parkinson feature extraction" loading="lazy"></figure>
                         </div>
                         <div class="feature-text">
+                            <span class="pnum">03</span>
                             <span class="kicker c-orange">Signal processing</span>
                             <h3>Feature extraction for assisting medical diagnosis of Parkinson disease</h3>
                             <p>Processing of physiological signals to extract quantitative features that can help clinicians distinguish patterns associated with Parkinson disease, as a support tool for medical diagnosis.</p>
@@ -363,6 +376,7 @@
                             <figure class="framed dark"><img src="images/projects/ct-3d-reconstruction.jpg" alt="3D reconstruction of a CT scan" loading="lazy"></figure>
                         </div>
                         <div class="feature-text">
+                            <span class="pnum">04</span>
                             <span class="kicker c-gold">Medical imaging</span>
                             <h3>3D reconstruction of CT images</h3>
                             <p>Volumetric reconstruction of computed tomography slices into a 3D model of the skull, alongside axial, coronal and sagittal views, to explore anatomy beyond individual 2D images.</p>
@@ -373,9 +387,9 @@
             </section>
 
             <!-- C2I -->
-            <section id="c2i" class="paragraph1 bg-mint accent-orange reveal">
+            <section id="c2i" class="paragraph1 sec-dark reveal">
                 <div class="container">
-                    <h1>Cyborg Insects Initiative (C2I)</h1>
+                    <div class="sec-head"><span class="eyebrow c-orange">Initiative</span><h1>Cyborg Insects Initiative (C2I)</h1></div>
                     <img class="c2i-logo" src="images/c2i/c2i-logo.jpg" alt="C2I logo">
                     <p>
                         Insects are renowned for their superior biomechanical capabilities compared to their robotic counterparts, which are often inefficient in chaotic environments and are more costly and challenging to produce. The Cyborg Insects Initiative (C2I) is a project in which I am engaged, focusing on the development of efficient biobots inspired by insects.
@@ -422,9 +436,9 @@
             </section>
 
             <!-- AFFILIATIONS -->
-            <section id="affiliations" class="paragraph1 bg-blush accent-maroon reveal">
+            <section id="affiliations" class="paragraph1 sec-blush reveal">
                 <div class="container">
-                    <h1>Affiliations</h1>
+                    <div class="sec-head"><span class="eyebrow c-maroon">Affiliations</span><h1>Institutions &amp; people</h1></div>
 
                     <div class="memorial">
                         <figure class="memorial-portrait">
@@ -482,45 +496,53 @@
             </section>
 
             <!-- CERTIFICATIONS -->
-            <section id="certifications" class="paragraph1 bg-sky accent-gold reveal">
+            <section id="certifications" class="paragraph1 sec-sky reveal">
                 <div class="container">
-                    <h1>Certifications and recognitions</h1>
+                    <div class="sec-head"><span class="eyebrow c-gold">Certifications</span><h1>Certifications &amp; recognitions</h1></div>
                     <p class="lead">Certificates, awards and acceptance letters collected along the way. Swipe or use the arrows, and click any certificate to enlarge it.</p>
+                    <div class="filters" role="tablist">
+                        <button class="active" data-filter="all">All</button>
+                        <button data-filter="award">🏆 Awards</button>
+                        <button data-filter="pub">📄 Publication</button>
+                        <button data-filter="course">🎓 Courses</button>
+                        <button data-filter="event">🎤 Events</button>
+                    </div>
                     <div class="certs">
-                        <figure class="cert"><img src="images/certs/mdpi-publication.jpg" alt="Certificate of publication, Biology (MDPI)" loading="lazy"><figcaption><span class="date">Nov 2026</span><strong>Certificate of Publication, Editor’s Choice</strong> — <em>Biology</em> (MDPI)</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/mdpi-acceptance.jpg" alt="Certificate of acceptance, Biology (MDPI)" loading="lazy"><figcaption><span class="date">June 2026</span><strong>Certificate of Acceptance</strong> — <em>Biology</em> (MDPI)</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/colegio-angeles.jpg" alt="Recognition from Colegio Ángeles" loading="lazy"><figcaption><span class="date">May 2026</span><strong>Recognition</strong> — Colegio Ángeles</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/honors-panel.jpg" alt="Honors program panel recognition" loading="lazy"><figcaption><strong>Panel participant</strong> — II Congreso del Programa de Honores, UDLAP</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/nature-peer-review.jpg" alt="Nature Masterclasses Focus on Peer Review certificate" loading="lazy"><figcaption><span class="date">Dec 2025</span><strong>Focus on Peer Review</strong> — Nature Masterclasses</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/uoft-ai-global-health.jpg" alt="University of Toronto AI in Global Health Research certificate" loading="lazy"><figcaption><span class="date">Dec 2025</span><strong>AI in Global Health Research</strong> — University of Toronto</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/expocem-otono-2025.jpg" alt="Expo CEM 3.0 Otoño 2025 recognition" loading="lazy"><figcaption><span class="date">Fall 2025</span><strong>Participant, Senior category</strong> — Expo CEM 3.0, UDLAP<span class="where">“Sistema de caracterización y estimulación de cucarachas cíborg”</span></figcaption></figure>
-                        <figure class="cert"><img src="images/certs/inaoe-silldromo.jpg" alt="INAOE third place recognition" loading="lazy"><figcaption><span class="date">Oct 2025</span><strong>Third place</strong> — Silldromo 2025, INAOE</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/data-science-poster.jpg" alt="Data science congress poster contest recognition" loading="lazy"><figcaption><strong>Poster competition</strong> — II Congreso Nacional de Ciencia de Datos, UDLAP</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/somib-cnib.jpg" alt="SOMIB acceptance letter" loading="lazy"><figcaption><span class="date">Jul 2025</span><strong>Accepted poster</strong> — CNIB 2025 (SOMIB)</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/icokg-buap.jpg" alt="ICOKG 2025 constancia, BUAP" loading="lazy"><figcaption><span class="date">2025</span><strong>Presenter</strong> — ICOKG 2025, BUAP</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/mujeres-ciencia-buap.jpg" alt="7a Jornada de Mujeres en la Ciencia constancia" loading="lazy"><figcaption><span class="date">Aug 2025</span><strong>Poster presenter</strong> — 7ª Jornada de Mujeres en la Ciencia, BUAP</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/mujeres-ciencia-letter.jpg" alt="Acceptance letter, 7a Jornada de Mujeres en la Ciencia" loading="lazy"><figcaption><span class="date">Aug 2025</span><strong>Acceptance letter</strong> — 7ª Jornada de Mujeres en la Ciencia</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/expocem-2025-first-place.jpg" alt="Expo CEM 2.0 first place" loading="lazy"><figcaption><span class="date">Spring 2025</span><strong>First place, Junior category</strong> — Expo CEM 2.0, UDLAP</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/neurolearning-diploma.jpg" alt="Diploma in Neurolearning, Universidad Anáhuac" loading="lazy"><figcaption><span class="date">May 2025</span><strong>Diploma in Neurolearning</strong> — Universidad Anáhuac Puebla</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/ieee-wearable-sensors.jpg" alt="IEEE Wearable Sensors for Cardiorespiratory Monitoring certificate" loading="lazy"><figcaption><span class="date">May 2025</span><strong>Wearable Sensors for Cardiorespiratory Monitoring</strong> — IEEE</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/boston-scientific.jpg" alt="Boston Scientific Bachelor’s Master Classes certificate" loading="lazy"><figcaption><span class="date">Spring 2025</span><strong>Bachelor’s Master Classes</strong> — Boston Scientific</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/uoft-startups.jpg" alt="University of Toronto Startups in the Medical Sciences certificate" loading="lazy"><figcaption><span class="date">Mar 2025</span><strong>Startups in the Medical Sciences</strong> — University of Toronto</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/expocem-otono-2024.jpg" alt="Expo CEM Otoño 2024 participation" loading="lazy"><figcaption><span class="date">Fall 2024</span><strong>Participant</strong> — Expo CEM, UDLAP</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/uoft-ai-medicine.jpg" alt="University of Toronto AI in Medicine certificate" loading="lazy"><figcaption><span class="date">Dec 2023</span><strong>AI in Medicine</strong> — University of Toronto</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/honors-member.jpg" alt="UDLAP Honors Program membership" loading="lazy"><figcaption><span class="date">Oct 2023</span><strong>Member</strong> — Programa de Honores, UDLAP</figcaption></figure>
-                        <figure class="cert"><img src="images/certs/microsoft-office-specialist.jpg" alt="Microsoft Office Specialist Excel 2016" loading="lazy"><figcaption><span class="date">2018</span><strong>Microsoft Office Specialist</strong> — Excel 2016</figcaption></figure>
+                        <figure class="cert" data-cat="pub"><img src="images/certs/mdpi-publication.jpg" alt="Certificate of publication, Biology (MDPI)" loading="lazy"><figcaption><span class="date">Nov 2026</span><strong>Certificate of Publication, Editor’s Choice</strong> — <em>Biology</em> (MDPI)</figcaption></figure>
+                        <figure class="cert" data-cat="pub"><img src="images/certs/mdpi-acceptance.jpg" alt="Certificate of acceptance, Biology (MDPI)" loading="lazy"><figcaption><span class="date">June 2026</span><strong>Certificate of Acceptance</strong> — <em>Biology</em> (MDPI)</figcaption></figure>
+                        <figure class="cert" data-cat="award"><img src="images/certs/colegio-angeles.jpg" alt="Recognition from Colegio Ángeles" loading="lazy"><figcaption><span class="date">May 2026</span><strong>Recognition</strong> — Colegio Ángeles</figcaption></figure>
+                        <figure class="cert" data-cat="event"><img src="images/certs/honors-panel.jpg" alt="Honors program panel recognition" loading="lazy"><figcaption><strong>Panel participant</strong> — II Congreso del Programa de Honores, UDLAP</figcaption></figure>
+                        <figure class="cert" data-cat="course"><img src="images/certs/nature-peer-review.jpg" alt="Nature Masterclasses Focus on Peer Review certificate" loading="lazy"><figcaption><span class="date">Dec 2025</span><strong>Focus on Peer Review</strong> — Nature Masterclasses</figcaption></figure>
+                        <figure class="cert" data-cat="course"><img src="images/certs/uoft-ai-global-health.jpg" alt="University of Toronto AI in Global Health Research certificate" loading="lazy"><figcaption><span class="date">Dec 2025</span><strong>AI in Global Health Research</strong> — University of Toronto</figcaption></figure>
+                        <figure class="cert" data-cat="event"><img src="images/certs/expocem-otono-2025.jpg" alt="Expo CEM 3.0 Otoño 2025 recognition" loading="lazy"><figcaption><span class="date">Fall 2025</span><strong>Participant, Senior category</strong> — Expo CEM 3.0, UDLAP<span class="where">“Sistema de caracterización y estimulación de cucarachas cíborg”</span></figcaption></figure>
+                        <figure class="cert" data-cat="award"><img src="images/certs/inaoe-silldromo.jpg" alt="INAOE third place recognition" loading="lazy"><figcaption><span class="date">Oct 2025</span><strong>Third place</strong> — Silldromo 2025, INAOE</figcaption></figure>
+                        <figure class="cert" data-cat="award"><img src="images/certs/data-science-poster.jpg" alt="Data science congress poster contest recognition" loading="lazy"><figcaption><strong>Poster competition</strong> — II Congreso Nacional de Ciencia de Datos, UDLAP</figcaption></figure>
+                        <figure class="cert" data-cat="event"><img src="images/certs/somib-cnib.jpg" alt="SOMIB acceptance letter" loading="lazy"><figcaption><span class="date">Jul 2025</span><strong>Accepted poster</strong> — CNIB 2025 (SOMIB)</figcaption></figure>
+                        <figure class="cert" data-cat="event"><img src="images/certs/icokg-buap.jpg" alt="ICOKG 2025 constancia, BUAP" loading="lazy"><figcaption><span class="date">2025</span><strong>Presenter</strong> — ICOKG 2025, BUAP</figcaption></figure>
+                        <figure class="cert" data-cat="event"><img src="images/certs/mujeres-ciencia-buap.jpg" alt="7a Jornada de Mujeres en la Ciencia constancia" loading="lazy"><figcaption><span class="date">Aug 2025</span><strong>Poster presenter</strong> — 7ª Jornada de Mujeres en la Ciencia, BUAP</figcaption></figure>
+                        <figure class="cert" data-cat="event"><img src="images/certs/mujeres-ciencia-letter.jpg" alt="Acceptance letter, 7a Jornada de Mujeres en la Ciencia" loading="lazy"><figcaption><span class="date">Aug 2025</span><strong>Acceptance letter</strong> — 7ª Jornada de Mujeres en la Ciencia</figcaption></figure>
+                        <figure class="cert" data-cat="award"><img src="images/certs/expocem-2025-first-place.jpg" alt="Expo CEM 2.0 first place" loading="lazy"><figcaption><span class="date">Spring 2025</span><strong>First place, Junior category</strong> — Expo CEM 2.0, UDLAP</figcaption></figure>
+                        <figure class="cert" data-cat="course"><img src="images/certs/neurolearning-diploma.jpg" alt="Diploma in Neurolearning, Universidad Anáhuac" loading="lazy"><figcaption><span class="date">May 2025</span><strong>Diploma in Neurolearning</strong> — Universidad Anáhuac Puebla</figcaption></figure>
+                        <figure class="cert" data-cat="course"><img src="images/certs/ieee-wearable-sensors.jpg" alt="IEEE Wearable Sensors for Cardiorespiratory Monitoring certificate" loading="lazy"><figcaption><span class="date">May 2025</span><strong>Wearable Sensors for Cardiorespiratory Monitoring</strong> — IEEE</figcaption></figure>
+                        <figure class="cert" data-cat="course"><img src="images/certs/boston-scientific.jpg" alt="Boston Scientific Bachelor’s Master Classes certificate" loading="lazy"><figcaption><span class="date">Spring 2025</span><strong>Bachelor’s Master Classes</strong> — Boston Scientific</figcaption></figure>
+                        <figure class="cert" data-cat="course"><img src="images/certs/uoft-startups.jpg" alt="University of Toronto Startups in the Medical Sciences certificate" loading="lazy"><figcaption><span class="date">Mar 2025</span><strong>Startups in the Medical Sciences</strong> — University of Toronto</figcaption></figure>
+                        <figure class="cert" data-cat="event"><img src="images/certs/expocem-otono-2024.jpg" alt="Expo CEM Otoño 2024 participation" loading="lazy"><figcaption><span class="date">Fall 2024</span><strong>Participant</strong> — Expo CEM, UDLAP</figcaption></figure>
+                        <figure class="cert" data-cat="course"><img src="images/certs/uoft-ai-medicine.jpg" alt="University of Toronto AI in Medicine certificate" loading="lazy"><figcaption><span class="date">Dec 2023</span><strong>AI in Medicine</strong> — University of Toronto</figcaption></figure>
+                        <figure class="cert" data-cat="event"><img src="images/certs/honors-member.jpg" alt="UDLAP Honors Program membership" loading="lazy"><figcaption><span class="date">Oct 2023</span><strong>Member</strong> — Programa de Honores, UDLAP</figcaption></figure>
+                        <figure class="cert" data-cat="course"><img src="images/certs/microsoft-office-specialist.jpg" alt="Microsoft Office Specialist Excel 2016" loading="lazy"><figcaption><span class="date">2018</span><strong>Microsoft Office Specialist</strong> — Excel 2016</figcaption></figure>
                     </div>
                 </div>
             </section>
 
             <!-- CONTACT -->
-            <section id="contact" class="paragraph1 bg-cream accent-sky reveal">
+            <section id="contact" class="paragraph1 cta reveal">
                 <div class="container contact">
-                    <h1>Contact</h1>
-                    <p>Interested in collaborating, in biorobotics, or in the Cyborg Insects Initiative? Feel free to reach out.</p>
-                    <div class="hero-links">
-                        <a class="btn btn-orange" href="mailto:eduardo.gracidasrs@udlap.mx">eduardo.gracidasrs@udlap.mx</a>
-                        <a class="btn btn-sky" href="https://www.linkedin.com/in/eduardo-gracidas-reyes-9a9662331" target="_blank" rel="noopener">LinkedIn</a>
+                    <div class="sec-head center"><span class="eyebrow c-gold">Contact</span><h1>Let’s work together</h1>
+                    <p>Interested in collaborating, in biorobotics, or in the Cyborg Insects Initiative? I’m always happy to talk about research.</p></div>
+                    <div class="contact-cards">
+                        <a class="contact-card" href="mailto:eduardo.gracidasrs@udlap.mx"><span class="ic">✉️</span><strong>Email</strong><span>eduardo.gracidasrs@udlap.mx</span></a>
+                        <a class="contact-card" href="https://www.linkedin.com/in/eduardo-gracidas-reyes-9a9662331" target="_blank" rel="noopener"><span class="ic">💼</span><strong>LinkedIn</strong><span>Eduardo Gracidas Reyes</span></a>
+                        <a class="contact-card" href="https://doi.org/10.3390/biology15120947" target="_blank" rel="noopener"><span class="ic">📄</span><strong>Latest article</strong><span><em>Biology</em> 2026, 15(12), 947</span></a>
                     </div>
                 </div>
             </section>
