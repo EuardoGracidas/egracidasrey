@@ -298,5 +298,10 @@ window.I18N_ES = {
  "Biomedical Engineer &amp; Computer Scientist": "Ingeniero Biomédico y Científico de la Computación",
  "I design instrumentation, software and data analysis for biorobotics and biomechanics research — from insect-based biohybrid systems to medical devices.": "Diseño instrumentación, software y análisis de datos para investigación en biorrobótica y biomecánica, desde sistemas biohíbridos basados en insectos hasta dispositivos médicos.",
  "<span class=\"dot\"></span>M.Sc. student · Memorial University of Newfoundland": "<span class=\"dot\"></span>Estudiante de maestría · Memorial University of Newfoundland",
- "<a class=\"btn btn-primary btn-cv\" href=\"cv/Eduardo_Gracidas_Reyes_CV_EN.pdf\" target=\"_blank\" rel=\"noopener\">Download CV</a> <a class=\"btn btn-ghost\" href=\"#publication\">Featured publication</a>": "<a class=\"btn btn-primary btn-cv\" href=\"cv/Eduardo_Gracidas_Reyes_CV_ES.pdf\" target=\"_blank\" rel=\"noopener\">Descargar CV</a> <a class=\"btn btn-ghost\" href=\"#publication\">Publicación destacada</a>"
+ "<a class=\"btn btn-primary btn-cv\" href=\"cv/Eduardo_Gracidas_Reyes_CV_EN.pdf\" target=\"_blank\" rel=\"noopener\">Download CV</a> <a class=\"btn btn-ghost\" href=\"#publication\">Featured publication</a>": "<a class=\"btn btn-primary btn-cv\" href=\"cv/Eduardo_Gracidas_Reyes_CV_ES.pdf\" target=\"_blank\" rel=\"noopener\">Descargar CV</a> <a class=\"btn btn-ghost\" href=\"#publication\">Publicación destacada</a>",
+ "Education &amp; affiliations": "Educación y afiliaciones",
+ "Where I’ve studied and worked": "Dónde he estudiado y trabajado",
+ "The universities and research institute that shaped my path, and the people I work with.": "Las universidades y el instituto de investigación que han marcado mi trayectoria, y las personas con quienes trabajo.",
+ "<strong>Coursework:</strong> Algorithms (COMP 6901) · Software Engineering (COMP 6905)": "<strong>Cursos:</strong> Algoritmos (COMP 6901) · Ingeniería de Software (COMP 6905)",
+ "<span class=\"role\"><b>B.Sc. Biomedical Engineering</b> 2022 – 2026 · <em>summa cum laude</em></span> <span class=\"role\"><b>Honors Program</b> Since 2023</span>": "<span class=\"role\"><b>Licenciatura en Ingeniería Biomédica</b> 2022 – 2026 · <em>summa cum laude</em></span> <span class=\"role\"><b>Programa de Honores</b> Desde 2023</span>"
 };

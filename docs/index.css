@@ -2470,3 +2470,5 @@ footer{ border-top: none; background: #021f25; padding: 1.6rem 1rem; font-size: 
     .advance:nth-child(even) > :first-child{ order: 0; }
     .hero-photo::before{ display: none; }
 }
+.mem-course{ font-size: 0.92rem; color: var(--muted); margin-top: -0.2rem; }
+#affiliations .courses{ margin-bottom: 0.5rem; }
