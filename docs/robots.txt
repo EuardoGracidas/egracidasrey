@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://euardogracidas.github.io/egracidasrey/sitemap.xml

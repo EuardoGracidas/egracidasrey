@@ -329,6 +329,19 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (e) { /* counter service unavailable: keep it hidden */ }
     })();
 
+    // ---------- Dark mode ----------
+    const themeBtn = document.querySelector(".theme-toggle");
+    if (themeBtn) themeBtn.addEventListener("click", () => {
+        const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", next);
+        try { localStorage.setItem("theme", next); } catch (e) {}
+    });
+    if (window.matchMedia) matchMedia("(prefers-color-scheme: dark)").addEventListener("change", e => {
+        let saved = null;
+        try { saved = localStorage.getItem("theme"); } catch (err) {}
+        if (!saved) document.documentElement.setAttribute("data-theme", e.matches ? "dark" : "light");
+    });
+
     // Back-to-top button
     const toTop = document.getElementById("to-top");
     window.addEventListener("scroll", () => {
