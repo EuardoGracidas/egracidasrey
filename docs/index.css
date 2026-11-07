@@ -2506,3 +2506,8 @@ footer{ border-top: none; background: #021f25; padding: 1.6rem 1rem; font-size: 
 .cw-group h5{ margin: 0 0 0.45rem; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 @media (max-width: 800px){ .cw-groups{ grid-template-columns: 1fr; } }
 [data-theme="dark"] .coursework{ background: #162625; }
+/* about stats: degrees first */
+.stats .stat.degree-stat .num{ font-size: 1.12rem; letter-spacing: -0.01em; line-height: 1.3; }
+.stats .stat.c-gold.wide .num{ font-size: 1.35rem; }
+.stats .stat.c-maroon.wide:not(.degree-stat){ display: flex; align-items: baseline; gap: 0.6rem; }
+.stats .stat.c-maroon.wide:not(.degree-stat) .lbl{ margin-top: 0; }
