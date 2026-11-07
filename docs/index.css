@@ -1489,3 +1489,206 @@ h3.sub{ margin-top: 2rem !important; }
 @media (max-width: 800px){
     .sec-dark .advance, .sec-dark .advance:nth-child(even){ border-left: none; border-right: none; border-top: 6px solid var(--c); }
 }
+
+/* ---------- Affiliations v2 ---------- */
+.memorial-text .facts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.4rem 0 0.2rem;
+}
+.memorial-text .facts span{
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    font-size: 0.8rem;
+    background: color-mix(in srgb, var(--maroon) 10%, #fff);
+    color: var(--maroon);
+    border: 1px solid color-mix(in srgb, var(--maroon) 30%, transparent);
+    border-radius: 999px;
+    padding: 0.15rem 0.65rem;
+}
+.journey{
+    list-style: none;
+    margin: 0.4rem 0 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.6rem;
+    position: relative;
+}
+.journey::before{
+    content: "";
+    position: absolute;
+    left: 6%;
+    right: 6%;
+    top: 15px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--orange), var(--gold), var(--teal), var(--sky), var(--maroon));
+}
+.journey li{
+    position: relative;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    padding-top: 40px;
+}
+.journey li::before{
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--c);
+    border: 4px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.journey .when{
+    display: inline-block;
+    font-weight: 900;
+    font-size: 0.78rem;
+    color: #fff;
+    background: var(--c);
+    border-radius: 999px;
+    padding: 0.05rem 0.6rem;
+}
+.journey li.c-gold .when{ color: var(--teal); }
+.journey strong{
+    display: block;
+    color: var(--teal);
+    font-size: 0.9rem;
+    line-height: 1.3;
+    margin-top: 0.35rem;
+}
+.journey .at{ display: block; font-size: 0.78rem; color: var(--muted); font-weight: 700; margin-top: 0.15rem; }
+
+.inst-grid{ grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.4rem; }
+.inst2{
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 22px -14px rgba(0,0,0,0.55);
+    padding: 0 1.2rem 1.2rem;
+    transition: transform .2s;
+}
+.inst2:hover{ transform: translateY(-4px); }
+.inst2 header{
+    margin: 0 -1.2rem 0.9rem;
+    padding: 0.9rem 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    color: #fff;
+}
+.inst2.teal header{ background: linear-gradient(120deg, var(--teal), #0f6a6f); }
+.inst2.orange header{ background: linear-gradient(120deg, var(--orange), var(--gold)); }
+.inst2 header img{
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 12px;
+    padding: 4px;
+    flex-shrink: 0;
+}
+.inst2 header h3{ color: #fff; margin: 0; font-size: 1.35rem; }
+.inst2 header span{ font-family: "Nunito", sans-serif; font-size: 0.82rem; opacity: 0.92; line-height: 1.3; display: block; }
+.roles{ display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.role{
+    font-family: "Nunito", sans-serif;
+    font-size: 0.8rem;
+    background: #f1f5f4;
+    border-radius: 8px;
+    padding: 0.3rem 0.6rem;
+    color: var(--muted);
+}
+.role b{ color: var(--teal); margin-right: 0.3rem; }
+.inst2 p{ font-size: 0.93rem; text-align: left; }
+.checks{ list-style: none; padding: 0; margin: 0 0 0.9rem; }
+.checks li{
+    position: relative;
+    padding: 0.25rem 0 0.25rem 1.7rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
+.checks li::before{
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0.28rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+    text-align: center;
+    color: #fff;
+}
+.inst2.teal .checks li::before{ background: var(--teal); }
+.inst2.orange .checks li::before{ background: var(--orange); }
+
+.people-groups{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+.pgroup{
+    background: rgba(255,255,255,0.55);
+    border-radius: 16px;
+    padding: 0.9rem 1rem 1rem;
+    border: 1px solid rgba(122,31,53,0.12);
+}
+.pgroup-title{
+    display: inline-block;
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--c);
+    margin-bottom: 0.6rem;
+}
+.people2{ display: grid; gap: 0.7rem; }
+.person2{
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    background: #fff;
+    border-radius: 14px;
+    padding: 0.75rem 0.9rem;
+    box-shadow: 0 6px 14px -10px rgba(0,0,0,0.5);
+    font-family: "Nunito", sans-serif;
+    transition: transform .2s;
+}
+.person2:hover{ transform: translateX(4px); }
+.avatar{
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    font-size: 1.05rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--c), color-mix(in srgb, var(--c) 55%, #fff));
+    box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--c);
+}
+.person2 strong{ display: block; color: var(--teal); font-size: 1rem; }
+.person2 span:not(.avatar){ display: block; font-size: 0.85rem; color: var(--muted); font-weight: 700; }
+
+@media (max-width: 960px){
+    .journey{ grid-template-columns: repeat(3, 1fr); row-gap: 1.2rem; }
+    .journey::before{ display: none; }
+}
+@media (max-width: 800px){
+    .inst-grid, .people-groups{ grid-template-columns: 1fr; }
+    .journey{ grid-template-columns: 1fr; gap: 0; padding-left: 0.4rem; }
+    .journey::before{ display: block; left: 17px; right: auto; top: 6px; bottom: 6px; width: 4px; height: auto; background: linear-gradient(180deg, var(--orange), var(--gold), var(--teal), var(--sky), var(--maroon)); }
+    .journey li{ text-align: left; padding: 0.3rem 0 0.9rem 2.6rem; }
+    .journey li::before{ left: 2px; top: 0.35rem; transform: none; }
+}

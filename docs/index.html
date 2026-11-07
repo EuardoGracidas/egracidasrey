@@ -10,8 +10,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="index.css?v=11">
-        <script src="index.js?v=11" defer></script>
+        <link rel="stylesheet" href="index.css?v=12">
+        <script src="index.js?v=12" defer></script>
     </head>
     <body>
         <nav id="navbar">
@@ -448,7 +448,7 @@
                         <div class="memorial-text">
                             <img class="inst-logo" src="images/affiliations/memorial.png" alt="Memorial University logo">
                             <h3>Memorial University of Newfoundland</h3>
-                            <span class="date">M.Sc. Computer Science · Since September 2026</span>
+                            <div class="facts"><span>📍 St. John’s, NL, Canada</span><span>🎓 M.Sc. Computer Science</span><span>🗓️ Since Sep 2026</span><span>⭐ Fully funded</span></div>
                             <p>
                                 In September 2026 I moved to St. John’s, Newfoundland and Labrador, to start my Master’s degree in Computer Science at Memorial University, supported by a fully funded scholarship. Memorial is the largest university in Atlantic Canada, and its campus — from the iconic clock tower to the Core Science Facility — is now where I continue building on my background in biomedical engineering and research with advanced training in computing.
                             </p>
@@ -466,31 +466,72 @@
                         </div>
                     </div>
 
+                    <h3 class="sub">My path</h3>
+                    <ol class="journey">
+                        <li class="c-orange"><span class="when">2022</span><strong>Start of B.Sc. Biomedical Engineering</strong><span class="at">UDLAP</span></li>
+                        <li class="c-gold"><span class="when">2023</span><strong>Joined the Honors Program</strong><span class="at">UDLAP</span></li>
+                        <li class="c-teal"><span class="when">May 2025</span><strong>Professional practices</strong><span class="at">INAOE · Electronics</span></li>
+                        <li class="c-teal"><span class="when">Sep 2025</span><strong>Social service</strong><span class="at">INAOE</span></li>
+                        <li class="c-sky"><span class="when">2026</span><strong>Graduated <em>summa cum laude</em> &amp; published in <em>Biology</em></strong><span class="at">UDLAP · MDPI</span></li>
+                        <li class="c-maroon"><span class="when">Sep 2026</span><strong>Started M.Sc. Computer Science</strong><span class="at">Memorial University</span></li>
+                    </ol>
+
                     <div class="inst-grid">
-                        <article class="inst c-teal">
-                            <img class="inst-logo" src="images/affiliations/INAOE.png" alt="INAOE logo">
-                            <h3>INAOE</h3>
-                            <span class="date">Professional practices · May – August 2025<br>Social service · September 2025 – March 2026</span>
-                            <p>At the Instituto Nacional de Astrofísica, Óptica y Electrónica I worked in the Electronics area on the characterization of <em>Gromphadorhina portentosa</em> as a biological platform for biorobotic systems under environmental and electrical stimuli. My activities included adapting specimens to controlled experimental conditions and implementing an experimental environment with programmable temperature, humidity and light — the work that led to my article in <em>Biology</em>.</p>
+                        <article class="inst2 teal">
+                            <header>
+                                <img src="images/affiliations/INAOE.png" alt="INAOE logo">
+                                <div><h3>INAOE</h3><span>Instituto Nacional de Astrofísica, Óptica y Electrónica · Tonantzintla, Puebla</span></div>
+                            </header>
+                            <div class="roles">
+                                <span class="role"><b>Professional practices</b> May – Aug 2025</span>
+                                <span class="role"><b>Social service</b> Sep 2025 – Mar 2026</span>
+                            </div>
+                            <p>In the Electronics area I worked on the characterization of <em>Gromphadorhina portentosa</em> as a biological platform for biorobotic systems under environmental and electrical stimuli.</p>
+                            <ul class="checks">
+                                <li>Adapted specimens to controlled experimental conditions</li>
+                                <li>Implemented an experimental environment with programmable temperature, humidity and light</li>
+                                <li>Results published in <em>Biology</em> (MDPI) — <a href="#publication">Editor’s Choice article</a></li>
+                            </ul>
                             <div class="docs">
                                 <figure><img src="images/docs/professional-practices.jpg" alt="Professional practices completion letter, INAOE" loading="lazy"><figcaption>Professional practices — completion letter</figcaption></figure>
                                 <figure><img src="images/docs/social-service.jpg" alt="Social service start letter, INAOE" loading="lazy"><figcaption>Social service — start letter</figcaption></figure>
                             </div>
                         </article>
-                        <article class="inst c-orange">
-                            <img class="inst-logo" src="images/affiliations/udlap.jpg" alt="UDLAP logo">
-                            <h3>Universidad de las Américas Puebla</h3>
-                            <span class="date">B.Sc. Biomedical Engineering · 2022 – 2026<br>Honors Program · Since 2023</span>
-                            <p>UDLAP is where I studied Biomedical Engineering and graduated <em>summa cum laude</em>. As a member of the Honors Program I took part in research projects, the Programa de Honores congress and several editions of EXPOCEM, where my biomechanics and cyborg-insect projects were recognized.</p>
+                        <article class="inst2 orange">
+                            <header>
+                                <img src="images/affiliations/udlap.jpg" alt="UDLAP logo">
+                                <div><h3>UDLAP</h3><span>Universidad de las Américas Puebla · San Andrés Cholula, Puebla</span></div>
+                            </header>
+                            <div class="roles">
+                                <span class="role"><b>B.Sc. Biomedical Engineering</b> 2022 – 2026</span>
+                                <span class="role"><b>Honors Program</b> Since 2023</span>
+                            </div>
+                            <p>UDLAP is where I studied Biomedical Engineering and started doing research, taking part in projects, congresses and expositions throughout my degree.</p>
+                            <ul class="checks">
+                                <li>Graduated <em>summa cum laude</em></li>
+                                <li>First place, Junior category — Expo CEM 2.0 (2025)</li>
+                                <li>Panelist at the II Congreso del Programa de Honores</li>
+                                <li>Poster contest recognition — II Congreso Nacional de Ciencia de Datos</li>
+                            </ul>
                         </article>
                     </div>
 
-                    <h3>People</h3>
-                    <div class="people">
-                        <div class="person c-maroon"><strong>Oscar Meruvia Pastor</strong><span>M.Sc. supervisor · Memorial University</span></div>
-                        <div class="person c-maroon"><strong>Jay Henderson</strong><span>M.Sc. supervisor · Memorial University</span></div>
-                        <div class="person c-orange"><strong>Gerardo Díaz Ulises Arango</strong><span>Collaborator</span></div>
-                        <div class="person c-teal"><strong>Roberto Rosas Romero</strong><span>Collaborator</span></div>
+                    <h3 class="sub">People</h3>
+                    <div class="people-groups">
+                        <div class="pgroup">
+                            <span class="pgroup-title c-maroon">Current supervisors · Memorial University</span>
+                            <div class="people2">
+                                <div class="person2 c-maroon"><span class="avatar">OM</span><div><strong>Oscar Meruvia Pastor</strong><span>M.Sc. co-supervisor</span></div></div>
+                                <div class="person2 c-maroon"><span class="avatar">JH</span><div><strong>Jay Henderson</strong><span>M.Sc. co-supervisor</span></div></div>
+                            </div>
+                        </div>
+                        <div class="pgroup">
+                            <span class="pgroup-title c-teal">Collaborators</span>
+                            <div class="people2">
+                                <div class="person2 c-orange"><span class="avatar">GD</span><div><strong>Gerardo Díaz Ulises Arango</strong><span>Collaborator · co-author, <em>Biology</em> 2026</span></div></div>
+                                <div class="person2 c-teal"><span class="avatar">RR</span><div><strong>Roberto Rosas Romero</strong><span>Collaborator</span></div></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
