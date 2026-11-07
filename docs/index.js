@@ -224,10 +224,57 @@ document.addEventListener("DOMContentLoaded", () => {
         const text = document.getElementById("cite-text").innerText;
         try { await navigator.clipboard.writeText(text); }
         catch { const r = document.createRange(); r.selectNodeContents(document.getElementById("cite-text")); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); document.execCommand("copy"); sel.removeAllRanges(); }
-        copyBtn.textContent = "Copied ✓";
+        copyBtn.textContent = UI[lang].copied;
         copyBtn.classList.add("copied");
-        setTimeout(() => { copyBtn.textContent = "Copy citation"; copyBtn.classList.remove("copied"); }, 2000);
+        setTimeout(() => { copyBtn.textContent = UI[lang].copy; copyBtn.classList.remove("copied"); }, 2000);
     });
+
+    // ---------- Language switch (EN / ES) ----------
+    const I18N = window.I18N_ES || {};
+    const INLINE = new Set(["EM", "STRONG", "B", "I", "BR", "SPAN", "A", "SUP", "SUB", "SMALL"]);
+    const norm = h => h.replace(/\s+/g, " ").trim();
+    const blocks = [];
+    const collect = el => {
+        for (const c of el.children) {
+            if (c.closest("script,style,#lightbox,.thumbs,.lang-toggle")) continue;
+            if (/[A-Za-zÀ-ÿ]/.test(c.textContent) && c.tagName !== "BR" &&
+                [...c.querySelectorAll("*")].every(d => INLINE.has(d.tagName))) {
+                let t = c;
+                while (t.childNodes.length === 1 && t.firstElementChild) t = t.firstElementChild;
+                blocks.push({ el: t, en: t.innerHTML });
+                continue;
+            }
+            collect(c);
+        }
+    };
+    collect(document.body);
+    const UI = {
+        en: { copy: "Copy citation", copied: "Copied ✓" },
+        es: { copy: "Copiar cita", copied: "¡Copiada! ✓" }
+    };
+    let lang = "en";
+    const setLang = l => {
+        lang = l;
+        blocks.forEach(b => {
+            const tr = l === "es" ? I18N[norm(b.en)] : null;
+            const html = tr || b.en;
+            if (b.el.innerHTML !== html) b.el.innerHTML = html;
+        });
+        document.documentElement.lang = l;
+        document.querySelectorAll(".lang-toggle button").forEach(btn => {
+            const on = btn.dataset.lang === l;
+            btn.classList.toggle("active", on);
+            btn.setAttribute("aria-pressed", String(on));
+        });
+        try { localStorage.setItem("lang", l); } catch (e) {}
+        window.dispatchEvent(new Event("resize"));
+    };
+    document.querySelectorAll(".lang-toggle button").forEach(btn =>
+        btn.addEventListener("click", () => setLang(btn.dataset.lang)));
+    let saved = null;
+    try { saved = localStorage.getItem("lang"); } catch (e) {}
+    const initial = saved || ((navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en");
+    setLang(initial);
 
     // Back-to-top button
     const toTop = document.getElementById("to-top");

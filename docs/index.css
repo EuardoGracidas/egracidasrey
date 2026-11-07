@@ -817,7 +817,7 @@ footer{
     .carousel{ --per: 3; }
     #nav-links{ gap: 0.8rem; font-size: 0.92rem; }
 }
-@media (max-width: 1140px){
+@media (max-width: 1279px){
     #menu-toggle{ display: block; }
     #nav-links{
         display: none;
@@ -1692,3 +1692,31 @@ h3.sub{ margin-top: 2rem !important; }
     .journey li{ text-align: left; padding: 0.3rem 0 0.9rem 2.6rem; }
     .journey li::before{ left: 2px; top: 0.35rem; transform: none; }
 }
+
+/* ---------- Language toggle ---------- */
+#navbar .brand{ order: 1; margin-right: auto; }
+#nav-links{ order: 2; }
+.lang-toggle{
+    order: 3;
+    display: inline-flex;
+    margin-left: 1rem;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 999px;
+    padding: 2px;
+}
+#menu-toggle{ order: 4; margin-left: 0.6rem; }
+.lang-toggle button{
+    font-family: "Nunito", sans-serif;
+    font-weight: 900;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    border: none;
+    background: transparent;
+    color: #d8e6e8;
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+    transition: background .2s, color .2s;
+}
+.lang-toggle button.active{ background: var(--gold); color: var(--teal); }
