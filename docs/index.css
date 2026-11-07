@@ -1961,3 +1961,18 @@ body{ background: linear-gradient(180deg, #fbfaf2 0%, #f3f1e6 100%); }
     background-blend-mode: normal, normal, color-burn;
 }
 #affiliations-logos{ justify-content: center; gap: 2.2rem; }
+
+/* visit counter */
+.visit-counter{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.6rem;
+    padding: 0.3rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(233,162,59,0.45);
+    font-size: 0.9rem;
+}
+.visit-counter[hidden]{ display: none; }
+.visit-counter strong{ color: var(--gold); font-size: 1.05rem; letter-spacing: 0.02em; }

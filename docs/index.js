@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const blocks = [];
     const collect = el => {
         for (const c of el.children) {
-            if (c.closest("script,style,#lightbox,.thumbs,.lang-toggle")) continue;
+            if (c.closest("script,style,#lightbox,.thumbs,.lang-toggle,.visit-counter")) continue;
             if (/[A-Za-zÀ-ÿ]/.test(c.textContent) && c.tagName !== "BR" &&
                 [...c.querySelectorAll("*")].every(d => INLINE.has(d.tagName))) {
                 let t = c;
@@ -249,8 +249,8 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     collect(document.body);
     const UI = {
-        en: { copy: "Copy citation", copied: "Copied ✓" },
-        es: { copy: "Copiar cita", copied: "¡Copiada! ✓" }
+        en: { copy: "Copy citation", copied: "Copied ✓", visitors: "unique visitors", visitor: "unique visitor" },
+        es: { copy: "Copiar cita", copied: "¡Copiada! ✓", visitors: "visitantes únicos", visitor: "visitante único" }
     };
     let lang = "en";
     const setLang = l => {
@@ -267,6 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.setAttribute("aria-pressed", String(on));
         });
         try { localStorage.setItem("lang", l); } catch (e) {}
+        updateVisitLabel();
         window.dispatchEvent(new Event("resize"));
     };
     document.querySelectorAll(".lang-toggle button").forEach(btn =>
@@ -286,6 +287,47 @@ document.addEventListener("DOMContentLoaded", () => {
         addEventListener("scroll", upd, { passive: true });
         upd();
     }
+
+    // ---------- Unique visitor counter ----------
+    // Counts each browser only once: the first visit calls /hit (+1) and stores a
+    // marker in localStorage (and a 2-year cookie as a backup); later visits only read
+    // the value with /get. Local previews (file://, localhost) never increment it.
+    const COUNTER = "https://abacus.jasoncameron.dev";
+    const NS = "euardogracidas.github.io", KEY = "egracidasrey-unique-visitors";
+    const MARK = "eg-visitor-counted";
+    const counterBox = document.querySelector(".visit-counter");
+    const countEl = document.getElementById("visit-count");
+    var visitValue = null;
+    function updateVisitLabel() {
+        const lbl = document.getElementById("visit-label");
+        if (lbl) lbl.textContent = visitValue === 1 ? UI[lang].visitor : UI[lang].visitors;
+        const ce = document.getElementById("visit-count");
+        if (ce && visitValue != null) ce.textContent = visitValue.toLocaleString(lang === "es" ? "es-MX" : "en-CA");
+    }
+    const alreadyCounted = () => {
+        try { if (localStorage.getItem(MARK)) return true; } catch (e) {}
+        return document.cookie.split("; ").some(c => c.startsWith(MARK + "="));
+    };
+    const markCounted = () => {
+        try { localStorage.setItem(MARK, new Date().toISOString()); } catch (e) {}
+        document.cookie = MARK + "=1; max-age=" + 60 * 60 * 24 * 730 + "; path=/; SameSite=Lax";
+    };
+    const isLocal = !/^https?:$/.test(location.protocol) || /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+    const isBot = /bot|crawl|spider|slurp|headless|lighthouse/i.test(navigator.userAgent);
+    (async () => {
+        if (!counterBox) return;
+        const shouldHit = !isLocal && !isBot && !alreadyCounted();
+        try {
+            const r = await fetch(`${COUNTER}/${shouldHit ? "hit" : "get"}/${NS}/${KEY}`, { cache: "no-store" });
+            if (!r.ok) return;
+            const data = await r.json();
+            if (typeof data.value !== "number") return;
+            if (shouldHit) markCounted();
+            visitValue = data.value;
+            updateVisitLabel();
+            counterBox.hidden = false;
+        } catch (e) { /* counter service unavailable: keep it hidden */ }
+    })();
 
     // Back-to-top button
     const toTop = document.getElementById("to-top");
