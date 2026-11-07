@@ -596,7 +596,7 @@ main{
 }
 .people{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0.8rem;
 }
 .person{
@@ -903,3 +903,5 @@ footer{
     .carousel.showcase img{ aspect-ratio: 4 / 3; }
     .carousel.showcase figcaption{ font-size: 0.85rem; padding-bottom: 2rem; }
 }
+@media (max-width: 960px){ .people{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 800px){ .people{ grid-template-columns: 1fr; } }
