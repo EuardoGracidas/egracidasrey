@@ -322,7 +322,7 @@ window.I18N_ES = {
  "Biomedical systems design &amp; innovation": "Diseño e innovación de sistemas biomédicos",
  "M.Sc. student — Computer Science": "Estudiante de maestría — Ciencias de la Computación",
  "Memorial University of Newfoundland · fully funded scholarship": "Memorial University of Newfoundland · beca completa",
- "B.Sc. — Biomedical Engineering": "Licenciatura — Ingeniería Biomédica",
+ "B.Sc. (Honors) — Biomedical Engineering": "Licenciatura (Honores) — Ingeniería Biomédica",
  "Universidad de las Américas Puebla (UDLAP)": "Universidad de las Américas Puebla (UDLAP)",
  "Summa Cum Laude": "Summa Cum Laude",
  "B.Sc. Biomedical Engineering, UDLAP": "Licenciatura en Ingeniería Biomédica, UDLAP",
@@ -330,6 +330,6 @@ window.I18N_ES = {
  "awards in research &amp; poster competitions": "premios en concursos de investigación y carteles",
  "book chapters on cyborg cockroaches": "capítulos de libro sobre cucarachas cíborg",
  "<span class=\"num\">M.Sc. student — Computer Science</span><span class=\"lbl\">Memorial University of Newfoundland · fully funded scholarship</span>": "<span class=\"num\">Estudiante de maestría — Ciencias de la Computación</span><span class=\"lbl\">Memorial University of Newfoundland · beca completa</span>",
- "<span class=\"num\">B.Sc. — Biomedical Engineering</span><span class=\"lbl\">Universidad de las Américas Puebla (UDLAP)</span>": "<span class=\"num\">Licenciatura — Ingeniería Biomédica</span><span class=\"lbl\">Universidad de las Américas Puebla (UDLAP)</span>",
+ "<span class=\"num\">B.Sc. (Honors) — Biomedical Engineering</span><span class=\"lbl\">Universidad de las Américas Puebla (UDLAP)</span>": "<span class=\"num\">Licenciatura (Honores) — Ingeniería Biomédica</span><span class=\"lbl\">Universidad de las Américas Puebla (UDLAP)</span>",
  "<span class=\"num\">Summa Cum Laude</span><span class=\"lbl\">B.Sc. Biomedical Engineering, UDLAP</span>": "<span class=\"num\">Summa Cum Laude</span><span class=\"lbl\">Licenciatura en Ingeniería Biomédica, UDLAP</span>"
 };
