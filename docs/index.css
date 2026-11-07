@@ -2076,3 +2076,18 @@ body{ background: linear-gradient(180deg, #fbfaf2 0%, #f3f1e6 100%); }
 [data-theme="dark"] .person2:hover, [data-theme="dark"] .course:hover{ background: var(--d-card2); }
 [data-theme="dark"] .contact-card{ background: rgba(255,255,255,0.08); }
 [data-theme="dark"] html{ scrollbar-color: #2f5a60 #0b1416; }
+
+/* ---------- Videos ---------- */
+video{ display: block; width: 100%; max-width: 100%; background: #000; }
+.gallery figure.vid video{ aspect-ratio: 4 / 3; object-fit: cover; }
+.carousel.single figure.vid video{ aspect-ratio: 4 / 3; object-fit: contain; background: #0f2328; position: relative; }
+.carousel.single figure.vid.tall video{ object-fit: contain; }
+.advance video{ width: 100%; height: 100%; min-height: 170px; object-fit: cover; }
+.vidframe video{ aspect-ratio: 4 / 3; object-fit: contain; }
+figure.vid figcaption{ font-weight: 700; }
+@media (max-width: 800px){ .advance video{ aspect-ratio: 16 / 9; height: auto; min-height: 0; } }
+.btn-cv{ background: #fff; color: var(--teal) !important; }
+.btn-cv:hover{ background: var(--gold); }
+.contact-cards{ grid-template-columns: repeat(4, 1fr); max-width: 1040px; }
+@media (max-width: 1000px){ .contact-cards{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px){ .contact-cards{ grid-template-columns: 1fr; } }

@@ -329,6 +329,26 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (e) { /* counter service unavailable: keep it hidden */ }
     })();
 
+    // ---------- Autoplaying muted videos: play only while visible ----------
+    const autovids = document.querySelectorAll("video.autovid");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if ("IntersectionObserver" in window && !reduceMotion) {
+        const vo = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) e.target.play().catch(() => {});
+            else e.target.pause();
+        }), { threshold: 0.35 });
+        autovids.forEach(v => vo.observe(v));
+    } else {
+        autovids.forEach(v => v.setAttribute("controls", ""));
+    }
+    // pause a video when its carousel slides away
+    document.querySelectorAll(".carousel-track").forEach(t => t.addEventListener("scroll", () => {
+        t.querySelectorAll("video:not(.autovid)").forEach(v => {
+            const r = v.getBoundingClientRect(), tr = t.getBoundingClientRect();
+            if (r.right < tr.left + 10 || r.left > tr.right - 10) v.pause();
+        });
+    }, { passive: true }));
+
     // ---------- Dark mode ----------
     const themeBtn = document.querySelector(".theme-toggle");
     if (themeBtn) themeBtn.addEventListener("click", () => {
